@@ -1,0 +1,63 @@
+.navbar {
+    background-color: #ff0000;
+}
+.btn-buscar {
+    background-color: #fbcb04;
+    color: #274A86;
+    border: solid 1px #274A86;
+    /*margin-top: 5px;*/
+}
+@media (max-width: 576px) {
+    .btn-buscar {
+        margin-top: 5px;
+    }
+}
+.filters {
+    margin-top: 10px;
+    height: 7vh;
+    width: 100%;
+    border: solid 1px #274A86;
+    background-color: #fbcb04;
+    border-radius: 5px;
+    text-align: center;
+}
+.filters_big {
+    margin-top: 10px;
+    width: 100%;
+    border: solid 1px #274A86;
+    background-color: #fbcb04;
+    border-radius: 5px;
+}
+#btn-filters {
+    text-decoration: none;
+    color: #274A86
+}
+#tarjetas .card-body {
+    padding: 0px;
+    text-align: center;
+}
+#tarjetas .card {
+    width: 10rem;
+    margin-top: 10px;
+    background-color: red;
+    border: solid 1px #274A86;
+}
+#tarjetas .btn-tarjeta {
+    padding: 2px 4px;
+    margin-bottom: 8px;
+    background-color: #fbcb04;
+    color: #274A86;
+    border: solid 1px #274A86;
+}
+#tarjetas .card-text {
+    margin-bottom: 3px;
+}
+#tarjetas .card-title {
+    margin-bottom: 0;
+}
+#tarjetas .card-body h5, .card-body p {
+    color: #274A86;
+}
+#bicho {
+    background-color: red;
+}
