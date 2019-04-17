@@ -5,16 +5,164 @@
         <title>
             Data Lovers
         </title>
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
         <link href="style.css" rel="stylesheet"/>
     </head>
     <body>
-        <div id="root">
+        <nav class="navbar">
+            <a class="navbar-brand" href="https://fontmeme.com/es/fuente-pokemon/">
+                <img alt="fuente-pokemon" border="0" class="img-fluid" src="https://fontmeme.net/permalink/190417/14f1bc95669cc2912d8c9ca5b2517d24.png"/>
+            </a>
+            <form class="form-inline">
+                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search"/>
+                <button class="btn btn-buscar" type="submit">
+                    Buscar
+                </button>
+            </form>
+        </nav>
+        <div class="container">
+            <section class="filters">
+                <a href="" id="btn-filters">
+                    <p>
+                        clickme
+                    </p>
+                </a>
+            </section>
+            <!--  <a href="" id="btn-filters"> -->
+            <section class="container-fluid filters_big">
+                <div class="row">
+                    <div class="col-md-4">
+                        <select id="tipo__debilidad" name="">
+                            <option value="">
+                                seleccionar
+                            </option>
+                            <option value="tipo">
+                                tipo
+                            </option>
+                            <option value="debilidad">
+                                debilidad
+                            </option>
+                        </select>
+                        <a class="btn" href="">
+                            buscar
+                        </a>
+                        <a class="btn" href="">
+                            limpiar
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <a class="btn" href="" id="bicho">
+                            Bicho
+                        </a>
+                        <a class="btn" href="">
+                            Veneno
+                        </a>
+                        <a class="btn" href="">
+                            Fuego
+                        </a>
+                        <a class="btn" href="">
+                            Hielo
+                        </a>
+                        <a class="btn" href="">
+                            Volador
+                        </a>
+                        <a class="btn" href="">
+                            Psiquico
+                        </a>
+                        <a class="btn" href="">
+                            Agua
+                        </a>
+                        <a class="btn" href="">
+                            Tierra
+                        </a>
+                        <a class="btn" href="">
+                            Piedra
+                        </a>
+                        <a class="btn" href="">
+                            Electrico
+                        </a>
+                        <a class="btn" href="">
+                            Planta
+                        </a>
+                        <a class="btn" href="">
+                            Normal
+                        </a>
+                        <a class="btn" href="">
+                            Luchador
+                        </a>
+                        <a class="btn" href="">
+                            Hada
+                        </a>
+                        <a class="btn" href="">
+                            Fantasma
+                        </a>
+                        <a class="btn" href="">
+                            Acero
+                        </a>
+                        <a class="btn" href="">
+                            Oscuro
+                        </a>
+                        <a class="btn" href="">
+                            Dragon
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- </a> -->
+            <section id="tarjetas">
+                <div class="card">
+                    <img alt="" class="card-img-top" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Bulbasaur
+                        </h5>
+                        <p class="card-text">
+                            Nº 001
+                        </p>
+                        <a class="btn btn-tarjeta" href="#">
+                            ver mas
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="tarjetas_grandes">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <img alt="" class="" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
+                        <h5 class="card-title">
+                            Special title treatment
+                        </h5>
+                        <p class="card-text">
+                            With supporting text below as a natural lead-in to additional content.
+                        </p>
+                        <a class="btn btn-primary" href="#">
+                            volver
+                        </a>
+                        <a class="btn btn-primary" href="#">
+                            volver
+                        </a>
+                        <a class="btn btn-primary" href="#">
+                            volver
+                        </a>
+                        <a class="btn btn-primary" href="#">
+                            volver
+                        </a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+            </section>
         </div>
-        <div>
-            <h1>
-                Hola Mundo!
-            </h1>
-        </div>
+        <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+        </script>
         <!-- <script src="./data/injuries/injuries.js"></script> -->
         <!-- <script src="./data/pokemon/pokemon.js"></script> -->
         <!-- <script src="./data/steam/steam.js"></script> -->
