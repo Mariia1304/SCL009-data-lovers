@@ -64,7 +64,10 @@
 
 #cajaInfo {
 background-color: #274A86;
-margin-left: 50px;
-
 
 }
+
+.filtros-plegables .navbar-dark{
+    background-color: #fbcb04;
+
+} 
