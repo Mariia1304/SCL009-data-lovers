@@ -1,159 +1,156 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <title>
-    Data Lovers
-  </title>
-  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <a class="navbar-brand" href="https://fontmeme.com/es/fuente-pokemon/">
-      <img alt="fuente-pokemon" border="0" class="img-fluid"
-        src="https://fontmeme.net/permalink/190417/14f1bc95669cc2912d8c9ca5b2517d24.png" />
-    </a>
-    <form class="form-inline">
-      <input aria-label="Search" class="form-control mr-sm-2" placeholder="Nombre o número" type="search" />
-      <button class="btn btn-buscar" type="submit">
-        Buscar
-      </button>
-    </form>
-  </nav>
-
-  <div class="btn-plegable">
-        <div class="collapse" id="navbarToggleExternalContent"> 
-          <div class="filtros-plegable"> 
-                      <!--  <a href="" id="btn-filters"> -->
-    <section class="container-fluid filters_big">
-            <div class="row">
-              <div class="col-md-4">
-                <select id="tipo__debilidad" name="">
-                  <option value="">
-                    Seleccionar
-                  </option>
-                  <option value="tipo">
-                    Tipo
-                  </option>
-                  <option value="debilidad">
-                    Debilidad
-                  </option>
-                </select>
-                <a class="btn" href="">
-                  Buscar
-                </a>
-                <a class="btn" href="">
-                  Limpiar
-                </a>
-              </div>
-              <div class="col-md-8">
-                <a class="btn" href="" id="bicho">
-                  Bicho
-                </a>
-                <a class="btn" href="">
-                  Veneno
-                </a>
-                <a class="btn" href="">
-                  Fuego
-                </a>
-                <a class="btn" href="">
-                  Hielo
-                </a>
-                <a class="btn" href="">
-                  Volador
-                </a>
-                <a class="btn" href="">
-                  Psiquico
-                </a>
-                <a class="btn" href="">
-                  Agua
-                </a>
-                <a class="btn" href="">
-                  Tierra
-                </a>
-                <a class="btn" href="">
-                  Piedra
-                </a>
-                <a class="btn" href="">
-                  Electrico
-                </a>
-                <a class="btn" href="">
-                  Planta
-                </a>
-                <a class="btn" href="">
-                  Normal
-                </a>
-                <a class="btn" href="">
-                  Luchador
-                </a>
-                <a class="btn" href="">
-                  Hada
-                </a>
-                <a class="btn" href="">
-                  Fantasma
-                </a>
-                <a class="btn" href="">
-                  Acero
-                </a>
-                <a class="btn" href="">
-                  Oscuro
-                </a>
-                <a class="btn" href="">
-                  Dragon
-                </a>
-              </div>
-            </div>
-          </section>
-          </div>
-        </div>
-        <nav class="navbar navbar-dark bg-dark"> 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span id=titulo-filtros>Filtrar</span>
-          </button>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            Data Lovers
+        </title>
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="navbar-brand" href="https://fontmeme.com/es/fuente-pokemon/">
+                <img alt="fuente-pokemon" border="0" class="img-fluid" src="https://fontmeme.net/permalink/190417/14f1bc95669cc2912d8c9ca5b2517d24.png"/>
+            </a>
+            <form class="form-inline">
+                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Nombre o número" type="search"/>
+                <button class="btn btn-buscar" type="submit">
+                    Buscar
+                </button>
+            </form>
         </nav>
-      </div>
-
-   
-    <!-- </a> -->
-    <section id="tarjetas">
-      <div class="card">
-        <img alt="" class="card-img-top" src="http://www.serebii.net/pokemongo/pokemon/001.png" />
-        <div class="card-body">
-          <h5 class="card-title">
-            Bulbasaur
-          </h5>
-          <p class="card-text">
-            Nº 001
-          </p>
-          <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" href="#">
-            ver mas
-          </a>
+        <div class="btn-plegable">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="filtros-plegable">
+                    <!--  <a href="" id="btn-filters"> -->
+                    <section class="container-fluid filters_big">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select id="tipo__debilidad" name="">
+                                    <option value="">
+                                        Seleccionar
+                                    </option>
+                                    <option value="tipo">
+                                        Tipo
+                                    </option>
+                                    <option value="debilidad">
+                                        Debilidad
+                                    </option>
+                                </select>
+                                <a class="btn" href="">
+                                    Buscar
+                                </a>
+                                <a class="btn" href="">
+                                    Limpiar
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <a class="btn" href="" id="bicho">
+                                    Bicho
+                                </a>
+                                <a class="btn" href="">
+                                    Veneno
+                                </a>
+                                <a class="btn" href="">
+                                    Fuego
+                                </a>
+                                <a class="btn" href="">
+                                    Hielo
+                                </a>
+                                <a class="btn" href="">
+                                    Volador
+                                </a>
+                                <a class="btn" href="">
+                                    Psiquico
+                                </a>
+                                <a class="btn" href="">
+                                    Agua
+                                </a>
+                                <a class="btn" href="">
+                                    Tierra
+                                </a>
+                                <a class="btn" href="">
+                                    Piedra
+                                </a>
+                                <a class="btn" href="">
+                                    Electrico
+                                </a>
+                                <a class="btn" href="">
+                                    Planta
+                                </a>
+                                <a class="btn" href="">
+                                    Normal
+                                </a>
+                                <a class="btn" href="">
+                                    Luchador
+                                </a>
+                                <a class="btn" href="">
+                                    Hada
+                                </a>
+                                <a class="btn" href="">
+                                    Fantasma
+                                </a>
+                                <a class="btn" href="">
+                                    Acero
+                                </a>
+                                <a class="btn" href="">
+                                    Oscuro
+                                </a>
+                                <a class="btn" href="">
+                                    Dragon
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark navbar-filters">
+                <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                    <span id="titulo-filtros">
+                        Filtrar
+                    </span>
+                </button>
+            </nav>
         </div>
-      </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Bulbasaur N° 001</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-                     
-            <img alt="" class="" src="http://www.serebii.net/pokemongo/pokemon/001.png" />
-            <div class="container" id="info-tarjetas">
-                <div class=container id=cajaInfo>
-            "height": "0.71 m",
+        <!-- </a> -->
+        <section id="tarjetas">
+            <div class="card">
+                <img alt="" class="card-img-top" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Bulbasaur
+                    </h5>
+                    <p class="card-text">
+                        Nº 001
+                    </p>
+                    <a class="btn btn-primary" data-target="#exampleModalCenter" data-toggle="modal" href="#">
+                        ver mas
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Modal -->
+        <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">
+                            Bulbasaur N° 001
+                        </h5>
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img alt="" class="" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
+                        <div class="container" id="info-tarjetas">
+                            <div class="container" id="cajaInfo">
+                                "height": "0.71 m",
             "weight": "6.9 kg",
             "candy": "Bulbasaur Candy",
             "candy_count": 25,
@@ -162,48 +159,39 @@
             "avg_spawns": 69,
             "spawn_time": "20:00",
             "multipliers": [1.58],
-            "weaknesses": 
+            "weaknesses":
+                            </div>
+                        </div>
+                        <a class="btn btn-primary" href="#">
+                            Fire
+                        </a>
+                        <a class="btn btn-primary" href="#">
+                            Ice
+                        </a>
+                        <a class="btn btn-primary" href="#">
+                            Flying
+                        </a>
+                        <a class="btn btn-primary" href="#">
+                            Psychic
+                        </a>
+                    </div>
+                </div>
             </div>
-            </div>
-            <a class="btn btn-primary" href="#">
-             Fire
-            </a>
-            <a class="btn btn-primary" href="#">
-             Ice
-            </a>
-            <a class="btn btn-primary" href="#">
-             Flying
-            </a>
-            <a class="btn btn-primary" href="#">
-              Psychic
-            </a>
-            
-          </div>
-
         </div>
-      </div>
-    </div>
-  
-  </section>
-  </div>
-  <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-  </script>
-  <!-- <script src="./data/injuries/injuries.js"></script> -->
-  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-  <!-- <script src="./data/steam/steam.js"></script> -->
-  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-  <!-- <script src="./data/lol/lol.js"></script> -->
-  <script src="data.js">
-  </script>
-  <script src="main.js">
-  </script>
-</body>
-
+    </body>
 </html>
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+</script>
+<!-- <script src="./data/injuries/injuries.js"></script> -->
+<!-- <script src="./data/pokemon/pokemon.js"></script> -->
+<!-- <script src="./data/steam/steam.js"></script> -->
+<!-- <script src="./data/worldbank/worldbank.js"></script> -->
+<!-- <script src="./data/lol/lol.js"></script> -->
+<script src="data.js">
+</script>
+<script src="main.js">
+</script>
