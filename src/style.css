@@ -35,11 +35,20 @@
     text-align: center;
 }
 #tarjetas .card {
+<<<<<<< HEAD
     margin-right: 10px;
+=======
+    margin-right: 5px;
+    margin-left: 5px;
+>>>>>>> 97704d33dc7eec060a5d3bf5519b12c21f8a65e3
     width: 10rem;
     margin-top: 10px;
     border: solid 2px rgba(39, 74, 134, .7);
-    ;
+}
+.flex-center{
+display: flex;
+justify-content: center;
+
 }
 #tarjetas .btn-tarjeta {
     padding: 2px 4px;
@@ -139,3 +148,4 @@
     width: 90px;
     margin: 5px;
 }
+
