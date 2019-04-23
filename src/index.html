@@ -1,139 +1,146 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>
-            Data Lovers
-        </title>
-        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet"/>
-        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet">
-            <link href="style.css" rel="stylesheet"/>
-        </link>
-    </head>
-    <body>
-        <header>
-        <nav class="navbar">
-            <a class="navbar-brand" href="https://fontmeme.com/es/fuente-pokemon/">
-                <img alt="fuente-pokemon" border="0" class="img-fluid" src="https://fontmeme.net/permalink/190417/14f1bc95669cc2912d8c9ca5b2517d24.png"/>
-            </a>
-            <form class="form-inline">
-                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Nombre o número" type="search"/>
-                <button class="btn btn-buscar" type="">
-                    <i class="fas fa-search">
-                    </i>
-                </button>
-            </form>
-        </nav>
-    </header>
-        <div class="btn-plegable">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="filtros-plegable">
-                    <!--  <a href="" id="btn-filters"> -->
-                    <section class="container-fluid filters_big">
-                        <div class="row">
-                            <div class="col-md-8" style="margin-top: 10px;">
-                                <div class="row">
-                                    <ul>
-                                        <li class="btn filter-list bicho" href="">
-                                            Bicho
-                                        </li>
-                                        <li class="btn filter-list agua" href="">
-                                            Agua
-                                        </li>
-                                        <li class="btn filter-list luchador" href="">
-                                            Luchador
-                                        </li>
-                                        <li class="btn filter-list veneno" href="">
-                                            Veneno
-                                        </li>
-                                        <li class="btn filter-list tierra" href="">
-                                            Tierra
-                                        </li>
-                                        <li class="btn filter-list hada" href="">
-                                            Hada
-                                        </li>
-                                        <li class="btn filter-list fuego" href="">
-                                            Fuego
-                                        </li>
-                                        <li class="btn filter-list roca" href="">
-                                            Roca
-                                        </li>
-                                        <li class="btn filter-list fantasma" href="">
-                                            Fantasma
-                                        </li>
-                                        <li class="btn filter-list hielo" href="">
-                                            Hielo
-                                        </li>
-                                        <li class="btn filter-list electrico" href="">
-                                            Electrico
-                                        </li>
-                                        <li class="btn filter-list acero" href="">
-                                            Acero
-                                        </li>
-                                        <li class="btn filter-list volador" href="">
-                                            Volador
-                                        </li>
-                                        <li class="btn filter-list planta" href="">
-                                            Planta
-                                        </li>
-                                        <li class="btn filter-list siniestro" href="">
-                                            Siniestro
-                                        </li>
-                                        <li class="btn filter-list psiquico" href="">
-                                            Psiquico
-                                        </li>
-                                        <li class="btn filter-list normal" href="">
-                                            Normal
-                                        </li>
-                                        <li class="btn filter-list dragon" href="">
-                                            Dragon
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-2" style="margin-top: 10px;">
-                                <select id="tipo__debilidad" name="">
-                                    <option value="">
-                                        Ordenar
-                                    </option>
-                                    <option value="tipo">
-                                        de la A a la Z
-                                    </option>
-                                    <option value="debilidad">
-                                        de la Z a la A
-                                    </option>
-                                    <option value="debilidad">
-                                        por Tipo
-                                    </option>
-                                </select>
-                            </div>
-                            <div class="col-md-2" style="margin-top: 10px;">
-                                <button class="btn btn-buscar" type="">
-                                    <i class="fas fa-redo-alt"></i>
-                               
-                            </button>
-                            <button class="btn btn-buscar" type="">
-                                <i class="fas fa-arrow-circle-right"></i>
-                           
-                        </button>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Data Lovers
+  </title>
+  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+  </link>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="navbar-brand" href="https://fontmeme.com/es/fuente-pokemon/">
+        <img alt="fuente-pokemon" border="0" class="img-fluid"
+          src="https://fontmeme.net/permalink/190417/14f1bc95669cc2912d8c9ca5b2517d24.png" />
+      </a>
+      <form class="form-inline">
+        <input aria-label="Search" class="form-control mr-sm-2" placeholder="Nombre o número" type="search" />
+        <button class="btn btn-buscar" type="">
+          <i class="fas fa-search">
+          </i>
+        </button>
+      </form>
+    </nav>
+  </header>
+  <div class="btn-plegable">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="filtros-plegable">
+        <!--  <a href="" id="btn-filters"> -->
+        <section class="container-fluid filters_big">
+          <div class="row">
+            <div class="col-md-10" style="margin-top: 10px;">
+              <div class="row">
+                <ul>
+                  <li class="btn filter-list bicho" href="">
+                    Bicho
+                  </li>
+                  <li class="btn filter-list agua" href="">
+                    Agua
+                  </li>
+                  <li class="btn filter-list luchador" href="">
+                    Luchador
+                  </li>
+                  <li class="btn filter-list veneno" href="">
+                    Veneno
+                  </li>
+                  <li class="btn filter-list tierra" href="">
+                    Tierra
+                  </li>
+                  <li class="btn filter-list hada" href="">
+                    Hada
+                  </li>
+                  <li class="btn filter-list fuego" href="">
+                    Fuego
+                  </li>
+                  <li class="btn filter-list roca" href="">
+                    Roca
+                  </li>
+                  <li class="btn filter-list fantasma" href="">
+                    Fantasma
+                  </li>
+                  <li class="btn filter-list hielo" href="">
+                    Hielo
+                  </li>
+                  <li class="btn filter-list electrico" href="">
+                    Electrico
+                  </li>
+                  <li class="btn filter-list acero" href="">
+                    Acero
+                  </li>
+                  <li class="btn filter-list volador" href="">
+                    Volador
+                  </li>
+                  <li class="btn filter-list planta" href="">
+                    Planta
+                  </li>
+                  <li class="btn filter-list siniestro" href="">
+                    Siniestro
+                  </li>
+                  <li class="btn filter-list psiquico" href="">
+                    Psiquico
+                  </li>
+                  <li class="btn filter-list normal" href="">
+                    Normal
+                  </li>
+                  <li class="btn filter-list dragon" href="">
+                    Dragon
+                  </li>
+                  <div class="bnt-lim-ir">
+                    <li class="btn btn-buscar" type="">
+                      <i class="fas fa-arrow-circle-right"></i>
+                    </li>
+                    <li class="btn btn-buscar" id type="">
+                      <i class="fas fa-redo-alt"></i>
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </div>
-            <nav class="navbar navbar-dark navbar-filters">
-                <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
-                    <span class="navbar-toggler-icon">
-                    </span>
-                    <span id="titulo-filtros">
-                    </span>
-                </button>
-            </nav>
-        </div>
-        <!-- </a> -->
-        <section>
-            <div class="row" id="tarjetas">
-                <!-- <div class="card">
+          </div>
+          <div class="col-md-2" style="margin-top: 10px;">
+            <select id="tipo__debilidad" name="">
+              <option value="">
+                Ordenar
+              </option>
+              <option value="tipo">
+                de la A a la Z
+              </option>
+              <option value="debilidad">
+                de la Z a la A
+              </option>
+              <option value="debilidad">
+                por Tipo
+              </option>
+            </select>
+          </div>
+
+      </div>
+      </section>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark navbar-filters">
+    <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
+      class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+      <span id="titulo-filtros">
+      </span>
+    </button>
+  </nav>
+  </div>
+  <!-- </a> -->
+  <section>
+    <div class="row flex-center" id="tarjetas">
+      <!-- <div class="card">
                 <img alt="" class="card-img-top planta-veneno" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
                 <div class="card-body">
                     <h5 class="card-title">
@@ -147,99 +154,108 @@
                     </a>
                 </div>
             </div> -->
-            </div>
-        </section>
-        <!-- Modal -->
-        <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">
-                            Bulbasaur N° 001
-                        </h5>
-                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                            <span aria-hidden="true">
-                                ×
-                            </span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="grid">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img alt="" class="imagen-pokemon" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
-                                </div>
-                                <div class="col-md-8">
-                                    <ul>
-                                        <li>
-                                            "height": "0.71 m",
-                                        </li>
-                                        <li>
-                                            "weight": "6.9 kg",
-                                        </li>
-                                        <li>
-                                            "candy_count": 25,
-                                        </li>
-                                        <li>
-                                            "egg": "2 km",
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p>
-                                evolucion
-                            </p>
-                            <div class="row" id="evoluciones">
-                                <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3 ">
-                                    <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
-                                </div>
-                                <div class="col-md-2 col-sm-2 ">
-                                    <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/002.png"/>
-                                </div>
-                                <div class="col-md-2 col-sm-2 ">
-                                    <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/003.png"/>
-                                </div>
-                            </div>
-                            <div>
-                                <p>
-                                    tipos
-                                </p>
-                                <a class="btn btn-primary fuego" href="">
-                                    Fire
-                                </a>
-                                <a class="btn btn-primary hielo" href="#">
-                                    Ice
-                                </a>
-                            </div>
-                            <div>
-                                <p>
-                                    debilidades
-                                </p>
-                                <a class="btn btn-primary fuego" href="#">
-                                    Fire
-                                </a>
-                                <a class="btn btn-primary hielo" href="#">
-                                    Ice
-                                </a>
-                                <a class="btn btn-primary volador" href="#">
-                                    Flying
-                                </a>
-                                <a class="btn btn-primary psiquico" href="#">
-                                    Psychic
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+  </section>
+  <!-- Modal -->
+  <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter"
+    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            Bulbasaur N° 001
+          </h5>
+          <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+            <span aria-hidden="true">
+              ×
+            </span>
+          </button>
         </div>
-    </body>
+        <div class="modal-body">
+          <div class="grid">
+            <div class="row">
+              <div class="col-md-4">
+                <img alt="" class="imagen-pokemon" src="http://www.serebii.net/pokemongo/pokemon/001.png" />
+              </div>
+              <div class="col-md-8 pokeinfo">
+                <ul>
+                  <li>
+                        <i class="fas fa-arrows-alt-v"></i>
+                    0.71 m
+                  </li>
+                  <li>
+                        <i class="fas fa-weight"></i>
+                    6.9 kg
+                  </li>
+                  <li>
+                        <i class="fas fa-candy-cane"></i>
+                     25
+                  </li>
+                  <li>
+                    <i class="fas fa-egg"></i>
+                     2 km
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              evolucion
+            </p>
+            <div class="row" id="evoluciones">
+              <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3 ">
+                <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/001.png" />
+              </div>
+              <div class="col-md-2 col-sm-2 ">
+                <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/002.png" />
+              </div>
+              <div class="col-md-2 col-sm-2 ">
+                <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/003.png" />
+              </div>
+            </div>
+            <div>
+              <p>
+                tipos
+              </p>
+              <a class="btn btn-primary fuego" href="">
+                Fire
+              </a>
+              <a class="btn btn-primary hielo" href="#">
+                Ice
+              </a>
+            </div>
+            <div>
+              <p>
+                debilidades
+              </p>
+              <a class="btn btn-primary fuego" href="#">
+                Fire
+              </a>
+              <a class="btn btn-primary hielo" href="#">
+                Ice
+              </a>
+              <a class="btn btn-primary volador" href="#">
+                Flying
+              </a>
+              <a class="btn btn-primary psiquico" href="#">
+                Psychic
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
-<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
 </script>
-<script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+<script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
 </script>
-<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
 </script>
 <!-- <script src="./data/injuries/injuries.js"></script> -->
 <script src="./data/pokemon/pokemon.js">
