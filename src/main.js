@@ -3,6 +3,7 @@ const listaPokemones = POKEMON.pokemon;
 let card = '';
 let modal = '';
 let btnType = '';
+let btnWeak = '';
 window.addEventListener('load', function() {
     //imprimir tarjetas y modales
     for (let i = 0; i < listaPokemones.length; i++) {
@@ -69,19 +70,33 @@ window.addEventListener('load', function() {
                             <p>
                                 tipos
                             </p>
+
+
                             <div id="type${listaPokemones[i].id}">
+
+
                             </div>
                         </div>
                         <div>
                             <p>
+
+
                                debilidades
+
                             </p>
-                            <div id="weak${listaPokemones[i].id}"></div>
+<div id= "weak${listaPokemones[i].id}"> 
+</div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>`
     }
     document.getElementById('tarjetas').innerHTML = card;
@@ -89,10 +104,22 @@ window.addEventListener('load', function() {
     for (let i = 0; i < listaPokemones.length; i++) {
         for (let x = 0; x < listaPokemones[i].type.length; x++) {
             btnType += `<a class="btn btn-primary ${listaPokemones[i].type[x]}" href="#">
+
                                        ${listaPokemones[i].type[x]}
+
                                </a>`;
         }
         document.getElementById(`type${listaPokemones[i].id}`).innerHTML = btnType;
         btnType = '';
+        for (let x = 0; x < listaPokemones[i].weaknesses.length; x++) {
+            btnWeak += `<a class="btn btn-primary ${listaPokemones[i].weaknesses[x]}" href="#">
+
+                                     ${listaPokemones[i].weaknesses[x]}
+
+                             </a>`;
+        }
+        document.getElementById(`weak${listaPokemones[i].id}`).innerHTML = btnWeak;
+        btnWeak = '';
+        //document.getElementById(`${listaPokemones[i].id}`).innerHTML = btnType;
     }
 });
