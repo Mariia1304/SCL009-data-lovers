@@ -41,10 +41,9 @@
     margin-top: 10px;
     border: solid 2px rgba(39, 74, 134, .7);
 }
-.flex-center{
-display: flex;
-justify-content: center;
-
+.flex-center {
+    display: flex;
+    justify-content: center;
 }
 #tarjetas .btn-tarjeta {
     padding: 2px 4px;
@@ -75,44 +74,44 @@ justify-content: center;
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(39, 74, 134, .7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.bicho {
+.Bug {
     background-color: #729f3f;
 }
-.dragon {
+.Dragon {
     background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
     background-color: rgba(0, 0, 0, 0);
     background-color: #53a4cf;
 }
-.hada {
+.Fairy {
     background-color: #fdb9e9;
 }
-.fuego {
+.Fire {
     background-color: #fd7d24;
 }
-.fantasma {
+.Ghost {
     background-color: #7b62a3;
 }
-.tierra {
+.Ground {
     background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
     background-color: rgba(0, 0, 0, 0);
     background-color: #f7de3f;
 }
-.normal {
+.Normal {
     background-color: #a4acaf;
 }
-.psiquico {
+.Psychic {
     background-color: #f366b9;
 }
-.acero {
+.Steel {
     background-color: #9eb7b8;
 }
-.electrico {
+.Electric {
     background-color: #eed535;
 }
-.luchador {
+.Fighting {
     background-color: #d56723;
 }
-.volador {
+.Flying {
     background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
     background-color: rgba(0, 0, 0, 0);
     background-color: #3dc7ef;
@@ -122,29 +121,32 @@ justify-content: center;
     background-color: rgba(0, 0, 0, 0);
     background-color: #9bcc50;
 }
-.planta {
+.Grass {
     background-color: #9bcc50;
 }
-.hielo {
+.Ice {
     background-color: #51c4e7;
 }
-.veneno {
+.Poison {
     background-color: #b97fc9;
 }
-.roca {
+.Rock {
     background-color: #a38c21;
 }
-.siniestro {
+.Dark {
     background-color: #707070;
 }
-.agua {
+.Water {
     background-color: #4592c4;
 }
 .filter-list {
     width: 90px;
     margin: 5px;
+<<<<<<< HEAD
 }
 
 .pokeinfo{
     background-color: #a4acaf;
+=======
+>>>>>>> 56f0c55abb3ff97f38a6e60345c63b27a8e153e4
 }
