@@ -6,13 +6,15 @@ let card = '';
 
 let modal = '';
 
+let btnType = '';
+let btnWeak = '';
 window.addEventListener('load', function() {
 
     //imprimir tarjetas y modales
 
     for (let i = 0; i < listaPokemones.length; i++) {
 
-        card += `<div class="card" id="${listaPokemones[i].id}"><img alt="" class="card-img-top planta-veneno" src=${listaPokemones[i].img}><div class = "card-body"> <h5 class = "card-title">${listaPokemones[i].name}</h5><p class="card-text">Nº${listaPokemones[i].num}</p><a class = "btn btn-primary btn-tarjeta" data-target="#${listaPokemones[i].name}" data-toggle="modal" href="#">ver mas</a></div></div>`;
+        card += `<div class="card"><img alt="" class="card-img-top planta-veneno" src=${listaPokemones[i].img}><div class = "card-body"> <h5 class = "card-title">${listaPokemones[i].name}</h5><p class="card-text">Nº${listaPokemones[i].num}</p><a class = "btn btn-primary btn-tarjeta" data-target="#${listaPokemones[i].name}" data-toggle="modal" href="#">ver mas</a></div></div>`;
 
         modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${listaPokemones[i].name}" role="dialog" tabindex="-1">
 
@@ -138,9 +140,7 @@ window.addEventListener('load', function() {
 
                             </p>
 
-                            <div id="btn-type">
-
-                            
+                            <div id="type${listaPokemones[i].id}">
 
                             </div>
 
@@ -150,35 +150,11 @@ window.addEventListener('load', function() {
 
                             <p>
 
-                                debilidades
+                               debilidades
 
                             </p>
-
-                           
-
-                            <a class="btn btn-primary ${listaPokemones[i].weaknesses[0]}" href="#">
-
-                                 ${listaPokemones[i].weaknesses[0]}
-
-                            </a>
-
-                            <a class="btn btn-primary ${listaPokemones[i].weaknesses[1]}" href="#">
-
-                                ${listaPokemones[i].weaknesses[1]}
-
-                            </a>
-
-                            <a class="btn btn-primary ${listaPokemones[i].weaknesses[2]}" href="#">
-
-                                ${listaPokemones[i].weaknesses[2]}
-
-                            </a>
-
-                            <a class="btn btn-primary ${listaPokemones[i].weaknesses[3]}" href="#">
-
-                                ${listaPokemones[i].weaknesses[3]}
-
-                            </a>
+<div id= "weak${listaPokemones[i].id}"> 
+</div>
 
                         </div>
 
@@ -192,21 +168,39 @@ window.addEventListener('load', function() {
 
     </div>`
 
-        // for (let x = 0; x < listaPokemones[i].type.length; x++) {
-
-        //     btnType += `<a class="btn btn-primary ${listaPokemones[i].type[x]}" href="#">
-
-        //                          ${listaPokemones[i].type[x]}
-
-        //                     </a>`
-
-        // }
-
     }
 
     document.getElementById('tarjetas').innerHTML = card;
 
     document.getElementById('modal').innerHTML = modal;
 
+    for (let i = 0; i < listaPokemones.length; i++) {
+
+        for (let x = 0; x < listaPokemones[i].type.length; x++) {
+
+            btnType += `<a class="btn btn-primary ${listaPokemones[i].type[x]}" href="#">
+
+                                       ${listaPokemones[i].type[x]}
+
+                               </a>`;
+
+        }
+
+        document.getElementById(`type${listaPokemones[i].id}`).innerHTML = btnType;
+        btnType ='';
+
+        for (let x = 0; x < listaPokemones[i].weaknesses.length; x++) {
+
+          btnWeak += `<a class="btn btn-primary ${listaPokemones[i].weaknesses[x]}" href="#">
+
+                                     ${listaPokemones[i].weaknesses[x]}
+
+                             </a>`;
+
+    }
+    document.getElementById(`weak${listaPokemones[i].id}`).innerHTML = btnWeak;
+btnWeak = '';
+    //document.getElementById(`${listaPokemones[i].id}`).innerHTML = btnType;
+  }
 });
 
