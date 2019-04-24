@@ -8,15 +8,15 @@ let modal = '';
 
 let btnType = '';
 let btnWeak = '';
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
-    //imprimir tarjetas y modales
+  //imprimir tarjetas y modales
 
-    for (let i = 0; i < listaPokemones.length; i++) {
+  for (let i = 0; i < listaPokemones.length; i++) {
 
-        card += `<div class="card"><img alt="" class="card-img-top planta-veneno" src=${listaPokemones[i].img}><div class = "card-body"> <h5 class = "card-title">${listaPokemones[i].name}</h5><p class="card-text">Nº${listaPokemones[i].num}</p><a class = "btn btn-primary btn-tarjeta" data-target="#${listaPokemones[i].name}" data-toggle="modal" href="#">ver mas</a></div></div>`;
+    card += `<div class="card"><img alt="" class="card-img-top planta-veneno" src=${listaPokemones[i].img}><div class = "card-body"> <h5 class = "card-title">${listaPokemones[i].name}</h5><p class="card-text">Nº${listaPokemones[i].num}</p><a class = "btn btn-primary btn-tarjeta" data-target="#${listaPokemones[i].name}" data-toggle="modal" href="#">ver mas</a></div></div>`;
 
-        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${listaPokemones[i].name}" role="dialog" tabindex="-1">
+    modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${listaPokemones[i].name}" role="dialog" tabindex="-1">
 
         <div class="modal-dialog modal-dialog-centered" role="document">
 
@@ -168,30 +168,30 @@ window.addEventListener('load', function() {
 
     </div>`
 
-    }
+  }
 
-    document.getElementById('tarjetas').innerHTML = card;
+  document.getElementById('tarjetas').innerHTML = card;
 
-    document.getElementById('modal').innerHTML = modal;
+  document.getElementById('modal').innerHTML = modal;
 
-    for (let i = 0; i < listaPokemones.length; i++) {
+  for (let i = 0; i < listaPokemones.length; i++) {
 
-        for (let x = 0; x < listaPokemones[i].type.length; x++) {
+    for (let x = 0; x < listaPokemones[i].type.length; x++) {
 
-            btnType += `<a class="btn btn-primary ${listaPokemones[i].type[x]}" href="#">
+      btnType += `<a class="btn btn-primary ${listaPokemones[i].type[x]}" href="#">
 
                                        ${listaPokemones[i].type[x]}
 
                                </a>`;
 
-        }
+    }
 
-        document.getElementById(`type${listaPokemones[i].id}`).innerHTML = btnType;
-        btnType ='';
+    document.getElementById(`type${listaPokemones[i].id}`).innerHTML = btnType;
+    btnType = '';
 
-        for (let x = 0; x < listaPokemones[i].weaknesses.length; x++) {
+    for (let x = 0; x < listaPokemones[i].weaknesses.length; x++) {
 
-          btnWeak += `<a class="btn btn-primary ${listaPokemones[i].weaknesses[x]}" href="#">
+      btnWeak += `<a class="btn btn-primary ${listaPokemones[i].weaknesses[x]}" href="#">
 
                                      ${listaPokemones[i].weaknesses[x]}
 
@@ -199,8 +199,7 @@ window.addEventListener('load', function() {
 
     }
     document.getElementById(`weak${listaPokemones[i].id}`).innerHTML = btnWeak;
-btnWeak = '';
+    btnWeak = '';
     //document.getElementById(`${listaPokemones[i].id}`).innerHTML = btnType;
   }
 });
-
