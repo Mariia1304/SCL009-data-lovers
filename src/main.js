@@ -4,24 +4,11 @@ let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
-<<<<<<< HEAD
 window.addEventListener('load', function () {
-
   //imprimir tarjetas y modales
-
   for (let i = 0; i < listaPokemones.length; i++) {
-
-    card += `<div class="card"><img alt="" class="card-img-top planta-veneno" src=${listaPokemones[i].img}><div class = "card-body"> <h5 class = "card-title">${listaPokemones[i].name}</h5><p class="card-text">Nº${listaPokemones[i].num}</p><a class = "btn btn-primary btn-tarjeta" data-target="#${listaPokemones[i].name}" data-toggle="modal" href="#">ver mas</a></div></div>`;
-
+    card += `<div class="card"><img alt="" class="card-img-top" src=${listaPokemones[i].img}><div class = "card-body"> <h5 class = "card-title">${listaPokemones[i].name}</h5><p class="card-text">Nº${listaPokemones[i].num}</p><a class = "btn btn-primary btn-tarjeta" data-target="#${listaPokemones[i].name}" data-toggle="modal" href="#">ver mas</a></div></div>`;
     modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${listaPokemones[i].name}" role="dialog" tabindex="-1">
-
-=======
-window.addEventListener('load', function() {
-    //imprimir tarjetas y modales
-    for (let i = 0; i < listaPokemones.length; i++) {
-        card += `<div class="card"><img alt="" class="card-img-top planta-veneno" src=${listaPokemones[i].img}><div class = "card-body"> <h5 class = "card-title">${listaPokemones[i].name}</h5><p class="card-text">Nº${listaPokemones[i].num}</p><a class = "btn btn-primary btn-tarjeta" data-target="#${listaPokemones[i].name}" data-toggle="modal" href="#">ver mas</a></div></div>`;
-        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${listaPokemones[i].name}" role="dialog" tabindex="-1">
->>>>>>> d2ac09ea7bfa77439ad0a6ebea37c274f8fb07e4
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -73,7 +60,10 @@ window.addEventListener('load', function() {
                                 <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
                             </div>
                             <div class="col-md-2 col-sm-2 ">
-                                <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/002.png"/>
+                
+         
+                  
+                <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/002.png"/>
                             </div>
                             <div class="col-md-2 col-sm-2 ">
                                 <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/003.png"/>
@@ -83,91 +73,53 @@ window.addEventListener('load', function() {
                             <p>
                                 tipos
                             </p>
-
-
                             <div id="type${listaPokemones[i].id}">
-
-
                             </div>
                         </div>
                         <div>
                             <p>
-
-
                                debilidades
-
                             </p>
 <div id= "weak${listaPokemones[i].id}"> 
 </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>`
-<<<<<<< HEAD
-
   }
-
   document.getElementById('tarjetas').innerHTML = card;
-
   document.getElementById('modal').innerHTML = modal;
-
   for (let i = 0; i < listaPokemones.length; i++) {
-
     for (let x = 0; x < listaPokemones[i].type.length; x++) {
-
       btnType += `<a class="btn btn-primary ${listaPokemones[i].type[x]}" href="#">
-=======
-    }
-    document.getElementById('tarjetas').innerHTML = card;
-    document.getElementById('modal').innerHTML = modal;
-    for (let i = 0; i < listaPokemones.length; i++) {
-        for (let x = 0; x < listaPokemones[i].type.length; x++) {
-            btnType += `<a class="btn btn-primary ${listaPokemones[i].type[x]}" href="#">
->>>>>>> d2ac09ea7bfa77439ad0a6ebea37c274f8fb07e4
-
                                        ${listaPokemones[i].type[x]}
-
                                </a>`;
-<<<<<<< HEAD
-
     }
-
     document.getElementById(`type${listaPokemones[i].id}`).innerHTML = btnType;
     btnType = '';
-
     for (let x = 0; x < listaPokemones[i].weaknesses.length; x++) {
-
       btnWeak += `<a class="btn btn-primary ${listaPokemones[i].weaknesses[x]}" href="#">
-=======
-        }
-        document.getElementById(`type${listaPokemones[i].id}`).innerHTML = btnType;
-        btnType = '';
-        for (let x = 0; x < listaPokemones[i].weaknesses.length; x++) {
-            btnWeak += `<a class="btn btn-primary ${listaPokemones[i].weaknesses[x]}" href="#">
->>>>>>> d2ac09ea7bfa77439ad0a6ebea37c274f8fb07e4
-
                                      ${listaPokemones[i].weaknesses[x]}
-
                              </a>`;
-        }
-        document.getElementById(`weak${listaPokemones[i].id}`).innerHTML = btnWeak;
-        btnWeak = '';
-        //document.getElementById(`${listaPokemones[i].id}`).innerHTML = btnType;
     }
-<<<<<<< HEAD
     document.getElementById(`weak${listaPokemones[i].id}`).innerHTML = btnWeak;
     btnWeak = '';
     //document.getElementById(`${listaPokemones[i].id}`).innerHTML = btnType;
   }
 });
-=======
-});
->>>>>>> d2ac09ea7bfa77439ad0a6ebea37c274f8fb07e4
+
+//filtrar por tipo
+
+const arrNew = (arr) => {
+  const result = arr.filter(element => {
+    for (let i = 0; i < element.type.length; i++) {
+      return element.type[i] === 'Fire';
+    }
+    //return element.type === 'Fire';
+  })
+  console.log(result);
+  return result;
+}
+arrNew(listaPokemones)
