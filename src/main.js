@@ -191,4 +191,4 @@ const ordenarZA = (arr) => {
         return -1;
     });
 }
-//ordenarZA(listaPokemones);
+
