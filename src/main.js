@@ -24,33 +24,33 @@ const arrNew = (arr) => {
 arrNew(listaPokemones)
 // creamos tarjetas:
 const createCards = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
+    arr.forEach((element) => {
         card += `<div class="card">
-        			<img class=""alt="" class="card-img-top" src=${arr[i].img}>
+        			<img class=""alt="" class="card-img-top" src=${element.img}>
         			<div class = "card-body">
          				<h5 class = "card-title">
-         					${arr[i].name}
+         					${element.name}
          				</h5>
          				<p class="card-text">
-         					Nº${arr[i].num}
+         					Nº${element.num}
          				</p>
-         				<a class = "btn btn-primary btn-tarjeta" data-target="#${arr[i].name}" data-toggle="modal" href="#">
+         				<a class = "btn btn-primary btn-tarjeta" data-target="#${element.name}" data-toggle="modal" href="#">
          				ver mas
          				</a>
          			</div>
          		</div>`;
-    }
+    })
     document.getElementById('tarjetas').innerHTML = card;
 }
 // creamos modales
 const createModal = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
-        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${arr[i].name}" role="dialog" tabindex="-1">
+    arr.forEach((element) => {
+        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${element.name}" role="dialog" tabindex="-1">
 			        <div class="modal-dialog modal-dialog-centered" role="document">
 			            <div class="modal-content">
 			                <div class="modal-header">
 			                    <h5 class="modal-title" id="exampleModalLongTitle">
-			                        ${arr[i].name} N° ${arr[i].num}
+			                        ${element.name} N° ${element.num}
 			                    </h5>
 			                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
 			                        <span aria-hidden="true">
@@ -62,29 +62,29 @@ const createModal = (arr) => {
 			                    <div class="grid">
 			                        <div class="row">
 			                            <div class="col-md-4">
-			                                <img alt="" class="imagen-pokemon" src="${arr[i].img}"/>
+			                                <img alt="" class="imagen-pokemon" src="${element.img}"/>
 			                            </div>
 			                            <div class="col-md-8 pokeinfo">
 			                                <ul>
 			                                    <li>
 			                                        <i class="fas fa-arrows-alt-v">
 			                                        </i>
-			                                        ${arr[i].height}
+			                                        ${element.height}
 			                                    </li>
 			                                    <li>
 			                                        <i class="fas fa-weight">
 			                                        </i>
-			                                        ${arr[i].weight}
+			                                        ${element.weight}
 			                                    </li>
 			                                    <li>
 			                                        <i class="fas fa-candy-cane">
 			                                        </i>
-			                                        ${arr[i].candy_count}
+			                                        ${element.candy_count}
 			                                    </li>
 			                                    <li>
 			                                        <i class="fas fa-egg">
 			                                        </i>
-			                                        ${arr[i].egg}
+			                                        ${element.egg}
 			                                    </li>
 			                                </ul>
 			                            </div>
@@ -107,14 +107,14 @@ const createModal = (arr) => {
 			                            <p>
 			                                tipos
 			                            </p>
-			                            <div id="type${arr[i].id}">
+			                            <div id="type${element.id}">
 			                            </div>
 			                        </div>
 			                        <div>
 			                            <p>
 			                               debilidades
 			                            </p>
-										<div id= "weak${arr[i].id}"> 
+										<div id= "weak${element.id}"> 
 										</div>
 			                        </div>
 			                    </div>
@@ -122,30 +122,30 @@ const createModal = (arr) => {
 			            </div>
 			        </div>
     			</div>`
-    }
+    })
     document.getElementById('modal').innerHTML = modal;
 }
 // creamos botones de debilidades dentro de modal
 const createBtnOfWeak = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
-        for (let x = 0; x < arr[i].weaknesses.length; x++) {
-            btnWeak += `<a class="btn btn-primary ${arr[i].weaknesses[x]}" href="#">
-                            ${arr[i].weaknesses[x]}
+    arr.forEach((element) => {
+        element.weaknesses.forEach((weakness) => {
+            btnWeak += `<a class="btn btn-primary ${weakness}" href="#">
+                            ${weakness}
                         </a>`;
-        }
-        document.getElementById(`weak${arr[i].id}`).innerHTML = btnWeak;
+        });
+        document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
         btnWeak = '';
-    }
+    })
 }
 // creamos botones de tipos dentro de modal
 const createBtnOfType = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
-        for (let x = 0; x < arr[i].type.length; x++) {
-            btnWeak += `<a class="btn btn-primary ${arr[i].type[x]}" href="#">
-                            ${arr[i].type[x]}
+    arr.forEach((element) => {
+        element.type.forEach((element) => {
+            btnType += `<a class="btn btn-primary ${element}" href="#">
+                            ${element}
                         </a>`;
-        }
-        document.getElementById(`type${arr[i].id}`).innerHTML = btnWeak;
-        btnWeak = '';
-    }
+        });
+        document.getElementById(`type${element.id}`).innerHTML = btnType;
+        btnType = '';
+    })
 }
