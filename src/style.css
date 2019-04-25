@@ -116,11 +116,12 @@
     background-color: rgba(0, 0, 0, 0);
     background-color: #3dc7ef;
 }
-.planta-veneno {
+/*.planta-veneno {
     background: linear-gradient(180deg, #9bcc50 50%, #b97fc9 50%);
     background-color: rgba(0, 0, 0, 0);
     background-color: #9bcc50;
-}
+}*/
+
 .Grass {
     background-color: #9bcc50;
 }
