@@ -158,9 +158,10 @@ const ordenarAZ = (arr) => {
         }
         return -1;
     });
-    //console.log(ordered);
+
+    console.log(ordered);
 };
-ordenarAZ(listaPokemones);
+
 //ordenar ZA
 const ordenarZA = (arr) => {
     let ordered = arr.sort((a, b) => {
@@ -169,7 +170,7 @@ const ordenarZA = (arr) => {
         }
         return -1;
     });
-    console.log(ordered);
+    //console.log(ordered);
 }
 //ordenarZA(listaPokemones);
 //ordenar con evento del DOM
@@ -180,3 +181,4 @@ a.addEventListener('change', function() {
         ordenarAZ(listaPokemones);
     }
 }, false);
+console.log()
