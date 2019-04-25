@@ -5,23 +5,12 @@ let modal = '';
 let btnType = '';
 let btnWeak = '';
 window.addEventListener('load', function() {
+    //ordenarAZ(listaPokemones);
     createCards(listaPokemones);
     createModal(listaPokemones);
     createBtnOfWeak(listaPokemones);
     createBtnOfType(listaPokemones);
 });
-//filtrar por tipo
-const arrNew = (arr) => {
-    const result = arr.filter(element => {
-        for (let i = 0; i < element.type.length; i++) {
-            return element.type[i] === 'Fire';
-        }
-        //return element.type === 'Fire';
-    })
-    console.log(result);
-    return result;
-}
-arrNew(listaPokemones)
 // creamos tarjetas:
 const createCards = (arr) => {
     arr.forEach((element) => {
@@ -149,3 +138,45 @@ const createBtnOfType = (arr) => {
         btnType = '';
     })
 }
+//filtrar por tipo
+const arrNew = (arr) => {
+    const result = arr.filter(element => {
+        for (let i = 0; i < element.type.length; i++) {
+            return element.type[i] === 'Fire';
+        }
+        //return element.type === 'Fire';
+    })
+    console.log(result);
+    return result;
+}
+//arrNew(listaPokemones);
+//oredenar AZ
+const ordenarAZ = (arr) => {
+    let ordered = arr.sort((a, b) => {
+        if (a.name > b.name) {
+            return 1;
+        }
+        return -1;
+    });
+    //console.log(ordered);
+};
+ordenarAZ(listaPokemones);
+//ordenar ZA
+const ordenarZA = (arr) => {
+    let ordered = arr.sort((a, b) => {
+        if (a.name < b.name) {
+            return 1;
+        }
+        return -1;
+    });
+    console.log(ordered);
+}
+//ordenarZA(listaPokemones);
+//ordenar con evento del DOM
+let a = document.getElementById('orderType');
+a.addEventListener('change', function() {
+    let option = a.value;
+    if (option === 'AZ') {
+        ordenarAZ(listaPokemones);
+    }
+}, false);
