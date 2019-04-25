@@ -180,15 +180,8 @@ const ordenarAZ = (arr) => {
         }
         return -1;
     });
-<<<<<<< HEAD
-
-    console.log(ordered);
-};
-
-=======
 };
 //ordenarAZ(listaPokemones);
->>>>>>> 9c39bd6f734b2a0256798969623464ba53adc7e4
 //ordenar ZA
 const ordenarZA = (arr) => {
     let ordered = arr.sort((a, b) => {
@@ -197,20 +190,4 @@ const ordenarZA = (arr) => {
         }
         return -1;
     });
-<<<<<<< HEAD
-    //console.log(ordered);
 }
-//ordenarZA(listaPokemones);
-//ordenar con evento del DOM
-let a = document.getElementById('orderType');
-a.addEventListener('change', function() {
-    let option = a.value;
-    if (option === 'AZ') {
-        ordenarAZ(listaPokemones);
-    }
-}, false);
-console.log()
-=======
-}
-
->>>>>>> 9c39bd6f734b2a0256798969623464ba53adc7e4
