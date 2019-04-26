@@ -4,6 +4,8 @@ let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
+
+
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
 });
@@ -11,17 +13,19 @@ const imprimir = (arr) => {
     createCards(arr);
     createModal(arr);
     createBtnOfWeak(arr);
-    createBtnOfType(arr);
+	createBtnOfType(arr);
+
+
 };
 // creamos tarjetas:
 const createCards = (arr) => {
     arr.forEach((element) => {
         card += `<div class="card">
-        			<img class=""alt="" class="card-img-top" src=${element.img}>
+		<img class=""alt="" class="card-img-top" src=${element.img}>
         			<div class = "card-body">
          				<h5 class = "card-title">
          					${element.name}
-         				</h5>
+								</h5>
          				<p class="card-text">
          					Nº${element.num}
          				</p>
@@ -148,7 +152,7 @@ const arrNew = (arr) => {
         }
         //return element.type === 'Fire';
     })
-    console.log(result);
+    //console.log(result);
     return result;
 }
 //arrNew(listaPokemones);
@@ -180,15 +184,8 @@ const ordenarAZ = (arr) => {
         }
         return -1;
     });
-<<<<<<< HEAD
-
-    console.log(ordered);
-};
-
-=======
 };
 //ordenarAZ(listaPokemones);
->>>>>>> 9c39bd6f734b2a0256798969623464ba53adc7e4
 //ordenar ZA
 const ordenarZA = (arr) => {
     let ordered = arr.sort((a, b) => {
@@ -197,20 +194,21 @@ const ordenarZA = (arr) => {
         }
         return -1;
     });
-<<<<<<< HEAD
-    //console.log(ordered);
 }
-//ordenarZA(listaPokemones);
-//ordenar con evento del DOM
-let a = document.getElementById('orderType');
-a.addEventListener('change', function() {
-    let option = a.value;
-    if (option === 'AZ') {
-        ordenarAZ(listaPokemones);
-    }
-}, false);
-console.log()
-=======
-}
+const pokeList = POKEMON.pokemon;
 
->>>>>>> 9c39bd6f734b2a0256798969623464ba53adc7e4
+const createFilter = pokeList.filter(arr => {
+//if(arr.type.includes("Fairy")){
+	console.log(
+});
+
+/*let b = document.getElementById('filtros_plegables');
+b.addEventListener('click', function() {
+    let option = b.value;
+    if (option === '') {
+        creates(listaPokemones);
+        card = '';
+        modal = '';
+        btnType = '';
+        btnWeak = '';
+        imprimir(listaPokemones);*/
