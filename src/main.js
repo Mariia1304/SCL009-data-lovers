@@ -1,13 +1,17 @@
 /* Manejo del DOM */
 const listaPokemones = POKEMON.pokemon;
+const arrBtn = ['Fire', 'Bug', 'Water', 'Fighting', 'Poison', 'Ground', 'Fairy', 'Rock', 'Ghost', 'Ice', 'Electric', 'Steel', 'Dragon', 'Flying', 'Grass', 'Dark', 'Psychic', 'Normal'];
 let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
+<<<<<<< HEAD
 let btnFilters = '';
+=======
+>>>>>>> ffccfb0a22ba4c73ae7d75f26e032a94661e8e16
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
-    // createBtnOfFilters(arrBtn);
+    createBtnOfFilters(arrBtn);
 });
 const imprimir = (arr) => {
     createCards(arr);
@@ -155,15 +159,16 @@ let a = document.getElementById('orderType');
 a.addEventListener('change', function() {
     let option = a.value;
     if (option === 'AZ') {
-        ordenarAZ(listaPokemones);
+        window.orderAZ(listaPokemones);
         vaciar();
         imprimir(listaPokemones);
     } else if (option === 'ZA') {
-        ordenarZA(listaPokemones);
+        window.orderZA(listaPokemones);
         vaciar();
         imprimir(listaPokemones);
     }
 }, false);
+<<<<<<< HEAD
 //oredenar AZ
 const ordenarAZ = (arr) => {
     let ordered = arr.sort((a, b) => {
@@ -319,3 +324,21 @@ document.getElementById('Dragon').addEventListener('click', () => {
     vaciar();
     imprimir(datatype);
 });*/
+=======
+
+const createBtnOfFilters = (arr) => {
+    arr.forEach((element) => {
+        btnFilters += ` <li id="${element}" value="${element}" class="btn filter-list ${element}" href="">
+                                            ${element}
+                        </li>`;
+    })
+    document.getElementById('botonesFiltros').innerHTML = btnFilters;
+    arr.forEach((element) => {
+        document.getElementById(`${element}`).addEventListener('click', () => {
+            let datatype = window.filterType(listaPokemones, `${element}`);
+            vaciar();
+            imprimir(datatype);
+        });
+    })
+}
+>>>>>>> ffccfb0a22ba4c73ae7d75f26e032a94661e8e16

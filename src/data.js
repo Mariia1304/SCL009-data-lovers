@@ -9,3 +9,23 @@ const filterType = (arr, condition) => {
     return arrType;
 }
 window.filterType = filterType;
+//oredenar AZ
+const orderAZ = (arr) => {
+    const ordered = arr.sort((a, b) => {
+        if (a.name > b.name) {
+            return 1;
+        }
+        return -1;
+    });
+};
+window.orderAZ = orderAZ;
+//ordenar ZA
+const orderZA = (arr) => {
+    const ordered = arr.sort((a, b) => {
+        if (a.name < b.name) {
+            return 1;
+        }
+        return -1;
+    });
+}
+window.orderZA = orderZA;
