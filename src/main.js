@@ -26,7 +26,7 @@ const vaciar = () => {
 const createCards = (arr) => {
     arr.forEach((element) => {
         card += `<div class="card">
-                    <img class=""alt="" class="card-img-top" src=${element.img}>
+                    <img class="${element.type[0]}" alt="" class="card-img-top" src=${element.img}>
                     <div class = "card-body">
                         <h5 class = "card-title">
                             ${element.name}
@@ -34,7 +34,7 @@ const createCards = (arr) => {
                         <p class="card-text">
                             Nº${element.num}
                         </p>
-                        <a class = "btn btn-primary btn-tarjeta" data-target="#${element.name}" data-toggle="modal" href="#">
+                        <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
                         ver mas
                         </a>
                     </div>
@@ -45,7 +45,7 @@ const createCards = (arr) => {
 // creamos modales
 const createModal = (arr) => {
     arr.forEach((element) => {
-        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${element.name}" role="dialog" tabindex="-1">
+        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${element.id}" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
