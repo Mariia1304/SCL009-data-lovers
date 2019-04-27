@@ -5,7 +5,10 @@ let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
+
 let btnFilters = '';
+
+
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
@@ -145,7 +148,7 @@ const createBtnOfType = (arr) => {
                             ${element}
                         </a>`;
         });
-        document.getElementById(`type${element.id}`).innerHTML = btnType;
+        document.getElementById(`type${element.id}`).innerHTML += btnType;
         btnType = '';
     })
 }
@@ -163,6 +166,7 @@ a.addEventListener('change', function() {
         imprimir(listaPokemones);
     }
 }, false);
+
 const createBtnOfFilters = (arr) => {
     arr.forEach((element) => {
         btnFilters += ` <li id="${element}" value="${element}" class="btn filter-list ${element}" href="">
@@ -177,4 +181,8 @@ const createBtnOfFilters = (arr) => {
             imprimir(datatype);
         });
     })
+
 }
+
+}
+
