@@ -4,12 +4,7 @@ let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
-<<<<<<< HEAD
-
-
-=======
 let btnFilters = '';
->>>>>>> 95e2afc239bb6d77906d53fe05975cddde8d1de1
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     // createBtnOfFilters(arrBtn);
@@ -32,21 +27,6 @@ const vaciar = () => {
 const createCards = (arr) => {
     arr.forEach((element) => {
         card += `<div class="card">
-<<<<<<< HEAD
-		<img class=""alt="" class="card-img-top" src=${element.img}>
-        			<div class = "card-body">
-         				<h5 class = "card-title">
-         					${element.name}
-								</h5>
-         				<p class="card-text">
-         					Nº${element.num}
-         				</p>
-         				<a class = "btn btn-primary btn-tarjeta" data-target="#${element.name}" data-toggle="modal" href="#">
-         				ver mas
-         				</a>
-         			</div>
-         		</div>`;
-=======
                     <img class=""alt="" class="card-img-top" src=${element.img}>
                     <div class = "card-body">
                         <h5 class = "card-title">
@@ -60,7 +40,6 @@ const createCards = (arr) => {
                         </a>
                     </div>
                 </div>`;
->>>>>>> 95e2afc239bb6d77906d53fe05975cddde8d1de1
     })
     document.getElementById('tarjetas').innerHTML = card;
 }
@@ -167,25 +146,10 @@ const createBtnOfType = (arr) => {
                             ${element}
                         </a>`;
         });
-        document.getElementById(`type${element.id}`).innerHTML = btnType;
+        document.getElementById(`type${element.id}`).innerHTML += btnType;
         btnType = '';
     })
 }
-<<<<<<< HEAD
-//filtrar por tipo
-const arrNew = (arr) => {
-    const result = arr.filter(element => {
-        for (let i = 0; i < element.type.length; i++) {
-            return element.type[i] === 'Fire';
-        }
-        //return element.type === 'Fire';
-    })
-    //console.log(result);
-    return result;
-}
-//arrNew(listaPokemones);
-=======
->>>>>>> 95e2afc239bb6d77906d53fe05975cddde8d1de1
 //ordenar con evento del DOM
 let a = document.getElementById('orderType');
 a.addEventListener('change', function() {
@@ -219,25 +183,14 @@ const ordenarZA = (arr) => {
         return -1;
     });
 }
-<<<<<<< HEAD
-const pokeList = POKEMON.pokemon;
 
-const createFilter = pokeList.filter(arr => {
-//if(arr.type.includes("Fairy")){
-	console.log(
-});
 
-/*let b = document.getElementById('filtros_plegables');
-b.addEventListener('click', function() {
-    let option = b.value;
-    if (option === '') {
-        creates(listaPokemones);
-        card = '';
-        modal = '';
-        btnType = '';
-        btnWeak = '';
-        imprimir(listaPokemones);*/
-=======
+
+
+
+
+
+
 //filtrar por tipo
 // let result = [];
 // const arrFire = (arr) => {
@@ -266,12 +219,12 @@ b.addEventListener('click', function() {
 //     })
 //     document.getElementById('botonesFiltros').innerHTML = btnFilters;
 // }
-document.getElementById('Fire').addEventListener('click', () => {
-    let datatype = window.filterType(listaPokemones, 'Fire');
+/*document.getElementById('btnType.value').addEventListener('click', () => {
+    let datatype = window.filterType(listaPokemones, 'btnType.value');
     vaciar();
     imprimir(datatype);
 });
-document.getElementById('Bug').addEventListener('click', () => {
+/*document.getElementById('Bug').addEventListener('click', () => {
     let datatype = window.filterType(listaPokemones, 'Bug');
     vaciar();
     imprimir(datatype);
@@ -365,5 +318,4 @@ document.getElementById('Dragon').addEventListener('click', () => {
     let datatype = window.filterType(listaPokemones, 'Dragon');
     vaciar();
     imprimir(datatype);
-});
->>>>>>> 95e2afc239bb6d77906d53fe05975cddde8d1de1
+});*/
