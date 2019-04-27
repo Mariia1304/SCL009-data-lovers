@@ -5,6 +5,7 @@ let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
+let btnFilters = '';
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
@@ -13,9 +14,7 @@ const imprimir = (arr) => {
     createCards(arr);
     createModal(arr);
     createBtnOfWeak(arr);
-	createBtnOfType(arr);
-
-
+    createBtnOfType(arr);
 };
 const vaciar = () => {
     card = '';
@@ -164,7 +163,6 @@ a.addEventListener('change', function() {
         imprimir(listaPokemones);
     }
 }, false);
-
 const createBtnOfFilters = (arr) => {
     arr.forEach((element) => {
         btnFilters += ` <li id="${element}" value="${element}" class="btn filter-list ${element}" href="">
