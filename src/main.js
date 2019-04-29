@@ -146,7 +146,7 @@ const createBtnOfType = (arr) => {
                             ${element}
                         </a>`;
         });
-        document.getElementById(`type${element.id}`).innerHTML = btnType;
+        document.getElementById(`type${element.id}`).innerHTML += btnType;
         btnType = '';
     })
 }
