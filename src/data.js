@@ -17,6 +17,22 @@ const filterEvolution = (arr, condition) => {
     return arrEvolution;
 }
 window.filterType = filterType;
+//filtramos por nombre
+const filterName = (arr, condition) => {
+    const arrName = arr.filter(el => {
+        return el.name.toLowerCase().includes(condition);
+    })
+    return arrName;
+}
+window.filterName = filterName;
+//filtrar por id
+const filterNum = (arr, condition) => {
+    const arrNum = arr.filter(el => {
+        return el.num.includes(condition);
+    })
+    return arrNum;
+}
+window.filterNum = filterNum;
 //oredenar AZ
 const orderAZ = (arr) => {
     const ordered = arr.sort((a, b) => {
@@ -37,4 +53,23 @@ const orderZA = (arr) => {
     });
 }
 window.orderZA = orderZA;
-
+//oredenar numeros 1-151
+const orderNumUp = (arr) => {
+    const ordered = arr.sort((a, b) => {
+        if (a.num > b.num) {
+            return 1;
+        }
+        return -1;
+    });
+};
+window.orderNumUp = orderNumUp;
+//oredenar numeros 151 - 1
+const orderNumDown = (arr) => {
+    const ordered = arr.sort((a, b) => {
+        if (a.num < b.num) {
+            return 1;
+        }
+        return -1;
+    });
+};
+window.orderNumDown = orderNumDown;
