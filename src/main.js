@@ -5,6 +5,10 @@ let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
+let btnFilters = '';
+let buscadorNombre = '';
+
+
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
@@ -13,9 +17,7 @@ const imprimir = (arr) => {
     createCards(arr);
     createModal(arr);
     createBtnOfWeak(arr);
-	createBtnOfType(arr);
-
-
+    createBtnOfType(arr);
 };
 const vaciar = () => {
     card = '';
@@ -27,7 +29,7 @@ const vaciar = () => {
 const createCards = (arr) => {
     arr.forEach((element) => {
         card += `<div class="card">
-                    <img class=""alt="" class="card-img-top" src=${element.img}>
+                    <img class="${element.type[0]}" alt="" class="card-img-top" src=${element.img}>
                     <div class = "card-body">
                         <h5 class = "card-title">
                             ${element.name}
@@ -35,7 +37,7 @@ const createCards = (arr) => {
                         <p class="card-text">
                             Nº${element.num}
                         </p>
-                        <a class = "btn btn-primary btn-tarjeta" data-target="#${element.name}" data-toggle="modal" href="#">
+                        <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
                         ver mas
                         </a>
                     </div>
@@ -46,7 +48,7 @@ const createCards = (arr) => {
 // creamos modales
 const createModal = (arr) => {
     arr.forEach((element) => {
-        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="${element.name}" role="dialog" tabindex="-1">
+        modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${element.id}" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -95,13 +97,14 @@ const createModal = (arr) => {
                                     </p>
                                     <div class="row" id="evoluciones">
                                         <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-                                            <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/001.png"/>
+                                            <img alt="" class="img-fluid" src=""/>
+                                            ${element.next_evolution}
                                         </div>
                                         <div class="col-md-2 col-sm-2 ">
-                                            <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/002.png"/>
+                                            <img alt="" class="img-fluid" src=/>
                                         </div>
                                         <div class="col-md-2 col-sm-2 ">
-                                            <img alt="" class="img-fluid" src="http://www.serebii.net/pokemongo/pokemon/003.png"/>
+                                            <img alt="" class="img-fluid" src=/>
                                         </div>
                                     </div>
                                     <div>
@@ -179,4 +182,8 @@ const createBtnOfFilters = (arr) => {
             imprimir(datatype);
         });
     })
+
 }
+
+
+

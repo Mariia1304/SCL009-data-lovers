@@ -8,6 +8,14 @@ const filterType = (arr, condition) => {
     //console.log(arrType);
     return arrType;
 }
+
+const filterEvolution = (arr, condition) => {
+    const arrEvolution = arr.filter(el => {
+        return el.next_evolution.includes(condition);
+    });
+    //console.log(arrType);
+    return arrEvolution;
+}
 window.filterType = filterType;
 //oredenar AZ
 const orderAZ = (arr) => {
@@ -29,3 +37,4 @@ const orderZA = (arr) => {
     });
 }
 window.orderZA = orderZA;
+
