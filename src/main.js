@@ -6,6 +6,7 @@ let modal = '';
 let btnType = '';
 let btnWeak = '';
 let btnFilters = '';
+let evolution = '';
 let buscadorNombre = '';
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
@@ -132,6 +133,18 @@ const createBtnOfWeak = (arr) => {
     arr.forEach((element) => {
         element.weaknesses.forEach((weakness) => {
             btnWeak += `<a class="btn btn-primary ${weakness}" href="#">
+                            ${weakness}
+                        </a>`;
+        });
+        document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
+        btnWeak = '';
+    })
+}
+
+const createEvolution = (arr) => {
+    arr.forEach((element) => {
+        element.next_evolution.forEach((next_evolution) => {
+            evolution += `<a class="btn btn-primary ${weakness}" href="#">
                             ${weakness}
                         </a>`;
         });
