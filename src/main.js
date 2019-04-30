@@ -7,6 +7,7 @@ let btnType = '';
 let btnWeak = '';
 let btnFilters = '';
 let buscadorNombre = '';
+// let evolution = '';
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
@@ -93,17 +94,14 @@ const createModal = (arr) => {
                                     <p>
                                         evolucion
                                     </p>
-                                    <div class="row" id="evoluciones">
-                                        <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-                                            <img alt="" class="img-fluid" src=""/>
-                                            ${element.next_evolution}
-                                        </div>
-                                        <div class="col-md-2 col-sm-2 ">
-                                            <img alt="" class="img-fluid" src=/>
-                                        </div>
-                                        <div class="col-md-2 col-sm-2 ">
-                                            <img alt="" class="img-fluid" src=/>
-                                        </div>
+                                    <div class="row" id="evoluciones${element.id}">
+
+                                    <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
+                                        <p></p>
+                                       
+
+                                     </div>
+                                        
                                     </div>
                                     <div>
                                         <p>
@@ -151,6 +149,22 @@ const createBtnOfType = (arr) => {
         btnType = '';
     })
 }
+// crear botones de filtros dinamicamente
+const createBtnOfFilters = (arr) => {
+    arr.forEach((element) => {
+        btnFilters += ` <li id="${element}" value="${element}" class="btn filter-list ${element}" href="">
+                                            ${element}
+                        </li>`;
+    })
+    document.getElementById('botonesFiltros').innerHTML = btnFilters;
+    arr.forEach((element) => {
+        document.getElementById(`${element}`).addEventListener('click', () => {
+            let datatype = window.filterType(listaPokemones, `${element}`);
+            vaciar();
+            imprimir(datatype);
+        });
+    })
+};
 //ordenar con evento del DOM
 let a = document.getElementById('orderType');
 a.addEventListener('change', function() {
@@ -173,21 +187,7 @@ a.addEventListener('change', function() {
         imprimir(listaPokemones);
     }
 }, false);
-const createBtnOfFilters = (arr) => {
-    arr.forEach((element) => {
-        btnFilters += ` <li id="${element}" value="${element}" class="btn filter-list ${element}" href="">
-                                            ${element}
-                        </li>`;
-    })
-    document.getElementById('botonesFiltros').innerHTML = btnFilters;
-    arr.forEach((element) => {
-        document.getElementById(`${element}`).addEventListener('click', () => {
-            let datatype = window.filterType(listaPokemones, `${element}`);
-            vaciar();
-            imprimir(datatype);
-        });
-    })
-};
+//buscar pokemones por nombre o numero
 document.getElementById('btnBuscar').addEventListener("click", (event) => {
     event.preventDefault();
     buscadorNombre = document.getElementById('buscador').value.toLowerCase();
@@ -203,3 +203,19 @@ document.getElementById('btnBuscar').addEventListener("click", (event) => {
     document.getElementById('buscador').value = '';
     document.getElementById('buscador').focus();
 });
+// console.log(nextEvolution(listaPokemones));
+// const nextEvolution = listaPokemones.filter(element => (element.next_evolution));
+// console.log(nextEvolution);
+//imprimir evolution
+// const createEvolution = (arr) => {
+//     arr.forEach((element) => {
+//         element.next_evolution.forEach(element => {
+//             evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
+//                <p>${element.name}</p>
+//            </div>
+//           `
+//         });
+//     });
+//     document.getElementById(`evoluciones${element.id}`).innerHTML = evolution;
+//     evolution = '';
+// };
