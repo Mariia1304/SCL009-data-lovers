@@ -1,8 +1,8 @@
 .navbar {
-    background-color: #ff0000;
+    background-color: #1C408C;
 }
 .btn-buscar {
-    background-color: #fbcb04;
+    background-color: #E8E17E;
     color: #274A86;
     border: solid 2px rgba(39, 74, 134, .7);
     ;
@@ -18,13 +18,13 @@
     height: 7vh;
     width: 100%;
     border: solid 1px #274A86;
-    background-color: #fbcb04;
+    background-color: #E8E17E;
     border-radius: 5px;
     text-align: center;
 }
 .filters_big {
     width: 100%;
-    background-color: #fbcb04;
+    background-color: #E8E17E;
 }
 #btn-filters {
     text-decoration: none;
@@ -48,7 +48,7 @@
 #tarjetas .btn-tarjeta {
     padding: 2px 4px;
     margin-bottom: 8px;
-    background-color: #fbcb04;
+    background-color: #E8E17E;
     color: #274A86;
     border: solid 2px rgba(39, 74, 134, .7);
 }
@@ -65,7 +65,7 @@
     grid-row: auto;
 }
 .navbar-filters {
-    background-color: #fbcb04;
+    background-color: #E8E17E;
 }
 .navbar-dark .navbar-toggler {
     color: rgba(39, 74, 134, .7);
