@@ -11,20 +11,23 @@ let buscadorNombre = '';
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
+   
 });
 const imprimir = (arr) => {
     createCards(arr);
     createModal(arr);
     createBtnOfWeak(arr);
     createBtnOfType(arr);
+  
 };
 const vaciar = () => {
     card = '';
     modal = '';
     btnType = '';
     btnWeak = '';
+    
 }
-// creamos tarjetas:
+// creamos tarjetas:v          
 const createCards = (arr) => {
     arr.forEach((element) => {
         card += `<div class="card">
@@ -94,17 +97,8 @@ const createModal = (arr) => {
                                     <p>
                                         evolucion
                                     </p>
-                                    <div class="row" id="evoluciones">
-                                        <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-                                            <img alt="" class="img-fluid" src=""/>
-                                            ${element.next_evolution}
-                                        </div>
-                                        <div class="col-md-2 col-sm-2 ">
-                                            <img alt="" class="img-fluid" src=/>
-                                        </div>
-                                        <div class="col-md-2 col-sm-2 ">
-                                            <img alt="" class="img-fluid" src=/>
-                                        </div>
+                                    <div class="row" id="evoluciones${element}">
+                                      
                                     </div>
                                     <div>
                                         <p>
@@ -143,15 +137,22 @@ const createBtnOfWeak = (arr) => {
 
 const createEvolution = (arr) => {
     arr.forEach((element) => {
-        element.next_evolution.forEach((next_evolution) => {
-            evolution += `<a class="btn btn-primary ${weakness}" href="#">
-                            ${weakness}
-                        </a>`;
-        });
-        document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
-        btnWeak = '';
-    })
-}
+        element.next_evolution.forEach(element => {
+                    evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
+                <img alt="" class="img-fluid" src=""/>
+                ${element.next_evolution}
+            </div>
+            <div class="col-md-2 col-sm-2 ">
+                <img alt="" class="img-fluid" src=/>
+            </div>
+            <div class="col-md-2 col-sm-2 ">
+                <img alt="" class="img-fluid" src=/>
+            </div>`
+        })});
+        document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
+      evolution = '';
+    };
+            
 // creamos botones de tipos dentro de modal
 const createBtnOfType = (arr) => {
     arr.forEach((element) => {

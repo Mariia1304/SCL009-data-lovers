@@ -8,7 +8,8 @@ const filterType = (arr, condition) => {
     //console.log(arrType);
     return arrType;
 }
-
+window.filterType = filterType;
+//
 const filterEvolution = (arr, condition) => {
     const arrEvolution = arr.filter(el => {
         return el.next_evolution.includes(condition);
@@ -16,7 +17,7 @@ const filterEvolution = (arr, condition) => {
     //console.log(arrType);
     return arrEvolution;
 }
-window.filterType = filterType;
+
 //filtramos por nombre
 const filterName = (arr, condition) => {
     const arrName = arr.filter(el => {
