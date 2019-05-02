@@ -1,12 +1,13 @@
 /* Manejo del DOM */
-const listaPokemones = POKEMON.pokemon;
+
+const listaPokemones = window.POKEMON.pokemon;
 const arrBtn = ['Fire', 'Bug', 'Water', 'Fighting', 'Poison', 'Ground', 'Fairy', 'Rock', 'Ghost', 'Ice', 'Electric', 'Steel', 'Dragon', 'Flying', 'Grass', 'Dark', 'Psychic', 'Normal'];
 let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
 let btnFilters = '';
-let evolution = '';
+//let evolution = '';
 let buscadorNombre = '';
 // let evolution = '';
 window.addEventListener('load', function() {
@@ -142,23 +143,23 @@ const createBtnOfWeak = (arr) => {
     })
 }
 
-const createEvolution = (arr) => {
-    arr.forEach((element) => {
-        element.next_evolution.forEach(element => {
-                    evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-                <img alt="" class="img-fluid" src=""/>
-                ${element.next_evolution}
-            </div>
-            <div class="col-md-2 col-sm-2 ">
-                <img alt="" class="img-fluid" src=/>
-            </div>
-            <div class="col-md-2 col-sm-2 ">
-                <img alt="" class="img-fluid" src=/>
-            </div>`
-        })});
-        document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
-      evolution = '';
-    };
+// const createEvolution = (arr) => {
+//     arr.forEach((element) => {
+//         element.next_evolution.forEach(element => {
+//                     evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
+//                 <img alt="" class="img-fluid" src=""/>
+//                 ${element.next_evolution}
+//             </div>
+//             <div class="col-md-2 col-sm-2 ">
+//                 <img alt="" class="img-fluid" src=/>
+//             </div>
+//             <div class="col-md-2 col-sm-2 ">
+//                 <img alt="" class="img-fluid" src=/>
+//             </div>`
+//         })});
+//         document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
+//       evolution = '';
+//     };
             
 // creamos botones de tipos dentro de modal
 const createBtnOfType = (arr) => {
@@ -213,7 +214,7 @@ a.addEventListener('change', function() {
 //buscar pokemones por nombre o numero
 document.getElementById('btnBuscar').addEventListener("click", (event) => {
     event.preventDefault();
-    buscadorNombre = document.getElementById('buscador').value.toLowerCase();
+    buscadorNombre = document.getElementById('buscador').value;
     if (isNaN(buscadorNombre) === true) {
         let dataName = window.filterName(listaPokemones, buscadorNombre);
         vaciar();
