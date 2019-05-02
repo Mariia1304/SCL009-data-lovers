@@ -130,13 +130,43 @@ const createModal = (arr) => {
 const createBtnOfWeak = (arr) => {
     arr.forEach((element) => {
         element.weaknesses.forEach((weakness) => {
-            btnWeak += `<a id="weak${weakness}" class="btn btn-primary ${weakness} filter-list" href="#">
+            btnWeak += `<button value="${weakness}"  class="btnWeakModal btn btn-primary ${weakness} filter-list" href="#">
                             ${weakness}
-                        </a>`;
+                        </button>`;
         });
         document.getElementById(`weak${element.id}`).innerHTML = btnWeak;
         btnWeak = '';
     })
+    let x = document.getElementsByClassName('btnWeakModal');
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener('click', () => {
+            let valor = x[i].value;
+            let datatype = window.filterWeak(listaPokemones, valor);
+            vaciar();
+            imprimir(datatype);
+        })
+    }
+}
+// creamos botones de tipos dentro de modal
+const createBtnOfType = (arr) => {
+    arr.forEach((element) => {
+        element.type.forEach((element) => {
+            btnType += `<button value="${element}" class="btnTypeModal btn btn-primary filter-list ${element}" href="">
+                            ${element}
+                        </button>`;
+        });
+        document.getElementById(`type${element.id}`).innerHTML = btnType;
+        btnType = '';
+    })
+    let x = document.getElementsByClassName('btnTypeModal');
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener('click', () => {
+            let valor = x[i].value;
+            let datatype = window.filterType(listaPokemones, valor);
+            vaciar();
+            imprimir(datatype);
+        })
+    }
 }
 // const createEvolution = (arr) => {
 //     arr.forEach((element) => {
@@ -155,29 +185,6 @@ const createBtnOfWeak = (arr) => {
 //         document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
 //       evolution = '';
 //     };
-// creamos botones de tipos dentro de modal
-const createBtnOfType = (arr) => {
-    arr.forEach((element) => {
-        element.type.forEach((element) => {
-            btnType += `<button value="${element}" class="btnTypeModal btn btn-primary filter-list ${element}" href="">
-                            ${element}
-                        </button>`;
-        });
-        document.getElementById(`type${element.id}`).innerHTML = btnType;
-        btnType = '';
-    })
-    let x = document.getElementsByClassName('btnTypeModal');
-    console.log(x);
-    for (let i = 0; i < x.length; i++) {
-        x[i].addEventListener('click', (event) => {
-            event.preventDefault();
-            let valor = x[i].value;
-            let datatype = window.filterType(listaPokemones, valor);
-            vaciar();
-            imprimir(datatype);
-        })
-    }
-}
 // crear botones de filtros dinamicamente
 const createBtnOfFilters = (arr) => {
     arr.forEach((element) => {

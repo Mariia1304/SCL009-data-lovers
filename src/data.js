@@ -9,6 +9,13 @@ const filterType = (arr, condition) => {
     return arrType;
 }
 window.filterType = filterType;
+const filterWeak = (arr, condition) => {
+    const arrWeak = arr.filter(el => {
+        return el.weaknesses.includes(condition);
+    })
+    return arrWeak;
+}
+window.filterWeak = filterWeak;
 //evolution
 // array con pokemones que tienen next_evolution
 // const nextEvolution = listaPokemones.filter(element => (element.next_evolution));
