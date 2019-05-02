@@ -11,6 +11,13 @@ const filterType = (arr, condition) => {
     return arrType;
 }
 window.filterType = filterType;
+const filterWeak = (arr, condition) => {
+    const arrWeak = arr.filter(el => {
+        return el.weaknesses.includes(condition);
+    })
+    return arrWeak;
+}
+window.filterWeak = filterWeak;
 //evolution
 // array con pokemones que tienen next_evolution
 // const nextEvolution = listaPokemones.filter(element => (element.next_evolution));
@@ -44,13 +51,14 @@ window.filterNum = filterNum;
 
 
 //oredenar AZ
+
 const orderAZ = (arr) => { 
     arr.sort((a, b) => {
         if (a.name > b.name) {
             return 1;
         }
     });
-};
+}
 window.orderAZ = orderAZ;
 
 
@@ -60,7 +68,6 @@ const orderZA = (arr) => {
         if (a.name < b.name) {
             return 1;
         }
-        return -1;
     });
 }
 window.orderZA = orderZA;
@@ -74,7 +81,7 @@ const orderNumUp = (arr) => {
         }
         return -1;
     });
-};
+}
 window.orderNumUp = orderNumUp;
 
 
@@ -86,6 +93,6 @@ const orderNumDown = (arr) => {
         }
         return -1;
     });
+
 };
 window.orderNumDown = orderNumDown;
-
