@@ -69,8 +69,8 @@ describe('orderAZ', () => {
   it('debería ser una función', () => {
     assert.equal(typeof orderAZ, 'function');
   });
-  it('deberia retornar objeto Bulbasaur, Charmander, Squirtle al ordenar de la A a la Z', () => {
-    assert.deepEqual(window.orderAZ(data), [{
+  it('deberia retornar objeto Bulbasaur, Charmander, Squirtle al seleccione ordenar de la A a la Z', () => {
+    assert.deepEqual(window.orderAZ(data, 'a.name > b.name'), [{
       name: "Bulbasaur",
       num: "001",
       type: ["Grass", "Poison"]

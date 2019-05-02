@@ -11,6 +11,8 @@ const filterType = (arr, condition) => {
     return arrType;
 }
 window.filterType = filterType;
+
+//filtrar por debilidad
 const filterWeak = (arr, condition) => {
     const arrWeak = arr.filter(el => {
         return el.weaknesses.includes(condition);
