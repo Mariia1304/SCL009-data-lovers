@@ -63,7 +63,6 @@
 }
 .imagen-pokemon {
     grid-row: auto;
-    
 }
 .navbar-filters {
     background-color: #E8E17E;
@@ -145,16 +144,15 @@
     width: 90px;
     margin: 5px;
 }
-
-body{
+body {
     background-color: #DAF3E3;
 }
-
-h5 .pokeinfo{
-    color:#224791;
-    
+h5 .pokeinfo {
+    color: #224791;
 }
-
-.imagen-pokemon{
+.imagen-pokemon {
     border-style: double 2px
+}
+div.modal-backdrop.fade.show {
+    display: none;
 }

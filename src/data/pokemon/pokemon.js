@@ -3117,3 +3117,4 @@ const POKEMON = {
         "weaknesses": ["Bug", "Ghost", "Dark"]
     }]
 };;
+window.POKEMON = POKEMON;

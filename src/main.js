@@ -1,32 +1,29 @@
 /* Manejo del DOM */
-const listaPokemones = POKEMON.pokemon;
+const listaPokemones = window.POKEMON.pokemon;
 const arrBtn = ['Fire', 'Bug', 'Water', 'Fighting', 'Poison', 'Ground', 'Fairy', 'Rock', 'Ghost', 'Ice', 'Electric', 'Steel', 'Dragon', 'Flying', 'Grass', 'Dark', 'Psychic', 'Normal'];
 let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
 let btnFilters = '';
-let evolution = '';
+//let evolution = '';
 let buscadorNombre = '';
 // let evolution = '';
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
-   
 });
 const imprimir = (arr) => {
     createCards(arr);
     createModal(arr);
     createBtnOfWeak(arr);
     createBtnOfType(arr);
-  
 };
 const vaciar = () => {
     card = '';
     modal = '';
     btnType = '';
     btnWeak = '';
-    
 }
 // creamos tarjetas:v          
 const createCards = (arr) => {
@@ -133,7 +130,7 @@ const createModal = (arr) => {
 const createBtnOfWeak = (arr) => {
     arr.forEach((element) => {
         element.weaknesses.forEach((weakness) => {
-            btnWeak += `<a class="btn btn-primary ${weakness}" href="#">
+            btnWeak += `<a id="weak${weakness}" class="btn btn-primary ${weakness} filter-list" href="#">
                             ${weakness}
                         </a>`;
         });
@@ -141,41 +138,50 @@ const createBtnOfWeak = (arr) => {
         btnWeak = '';
     })
 }
-
-const createEvolution = (arr) => {
-    arr.forEach((element) => {
-        element.next_evolution.forEach(element => {
-                    evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-                <img alt="" class="img-fluid" src=""/>
-                ${element.next_evolution}
-            </div>
-            <div class="col-md-2 col-sm-2 ">
-                <img alt="" class="img-fluid" src=/>
-            </div>
-            <div class="col-md-2 col-sm-2 ">
-                <img alt="" class="img-fluid" src=/>
-            </div>`
-        })});
-        document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
-      evolution = '';
-    };
-            
+// const createEvolution = (arr) => {
+//     arr.forEach((element) => {
+//         element.next_evolution.forEach(element => {
+//                     evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
+//                 <img alt="" class="img-fluid" src=""/>
+//                 ${element.next_evolution}
+//             </div>
+//             <div class="col-md-2 col-sm-2 ">
+//                 <img alt="" class="img-fluid" src=/>
+//             </div>
+//             <div class="col-md-2 col-sm-2 ">
+//                 <img alt="" class="img-fluid" src=/>
+//             </div>`
+//         })});
+//         document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
+//       evolution = '';
+//     };
 // creamos botones de tipos dentro de modal
 const createBtnOfType = (arr) => {
     arr.forEach((element) => {
         element.type.forEach((element) => {
-            btnType += `<a class="btn btn-primary ${element}" href="#">
+            btnType += `<button value="${element}" class="btnTypeModal btn btn-primary filter-list ${element}" href="">
                             ${element}
-                        </a>`;
+                        </button>`;
         });
         document.getElementById(`type${element.id}`).innerHTML = btnType;
         btnType = '';
     })
+    let x = document.getElementsByClassName('btnTypeModal');
+    console.log(x);
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener('click', (event) => {
+            event.preventDefault();
+            let valor = x[i].value;
+            let datatype = window.filterType(listaPokemones, valor);
+            vaciar();
+            imprimir(datatype);
+        })
+    }
 }
 // crear botones de filtros dinamicamente
 const createBtnOfFilters = (arr) => {
     arr.forEach((element) => {
-        btnFilters += ` <li id="${element}" value="${element}" class="btn filter-list ${element}" href="">
+        btnFilters += ` <li id="${element}" value="${element}" class="btn btn-primary filter-list ${element}" href="">
                                             ${element}
                         </li>`;
     })

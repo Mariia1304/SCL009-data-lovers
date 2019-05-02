@@ -39,41 +39,39 @@ const filterNum = (arr, condition) => {
 window.filterNum = filterNum;
 //oredenar AZ
 const orderAZ = (arr) => {
-    const ordered = arr.sort((a, b) => {
+    arr.sort((a, b) => {
         if (a.name > b.name) {
             return 1;
         }
-        return -1;
     });
-};
+}
 window.orderAZ = orderAZ;
 //ordenar ZA
 const orderZA = (arr) => {
-    const ordered = arr.sort((a, b) => {
+    arr.sort((a, b) => {
         if (a.name < b.name) {
             return 1;
         }
-        return -1;
     });
 }
 window.orderZA = orderZA;
 //oredenar numeros 1-151
 const orderNumUp = (arr) => {
-    const ordered = arr.sort((a, b) => {
+    arr.sort((a, b) => {
         if (a.num > b.num) {
             return 1;
         }
         return -1;
     });
-};
+}
 window.orderNumUp = orderNumUp;
 //oredenar numeros 151 - 1
 const orderNumDown = (arr) => {
-    const ordered = arr.sort((a, b) => {
+    arr.sort((a, b) => {
         if (a.num < b.num) {
             return 1;
         }
         return -1;
     });
-};
+}
 window.orderNumDown = orderNumDown;
