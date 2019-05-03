@@ -9,6 +9,8 @@ const filterType = (arr, condition) => {
     return arrType;
 }
 window.filterType = filterType;
+
+//filtrar por debilidad
 const filterWeak = (arr, condition) => {
     const arrWeak = arr.filter(el => {
         return el.weaknesses.includes(condition);
@@ -44,10 +46,10 @@ const filterNum = (arr, condition) => {
     return arrNum;
 }
 window.filterNum = filterNum;
-// //sjhjas
+
 const sortData = (data, condition) => {
     let arr = [];
-    // de a/z
+
     if (condition === "AZ") {
         arr = data.sort(orderByName)
     }
@@ -64,6 +66,7 @@ const sortData = (data, condition) => {
         arr = data.sort(orderByNum).reverse();
     }
     return arr
+
 }
 
 function orderByNum(a, b) {

@@ -217,7 +217,7 @@ const createBtnOfFilters = (arr) => {
         });
     })
 };
-//ordenar con evento del DOM
+
 let a = document.getElementById('order');
 a.addEventListener('change', function() {
     document.getElementById('calculo-agregado').innerHTML = '';
@@ -226,6 +226,30 @@ a.addEventListener('change', function() {
     vaciar();
     imprimir(ordered);
 }, false);
+
+
+// //ordenar con evento del DOM
+// let a = document.getElementById('orderType');
+// a.addEventListener('change', function() {
+//     ordenarData= a.value;
+//     if (ordenarData === 'AZ') {
+//         window.orderAZ(listaPokemones);
+//         vaciar();
+//         imprimir(listaPokemones);
+//     } else if (option === 'ZA') {
+//         window.orderZA(listaPokemones);
+//         vaciar();
+//         imprimir(listaPokemones);
+//     } else if (option === 'NumUp') {
+//         window.orderNumUp(listaPokemones);
+//         vaciar();
+//         imprimir(listaPokemones);
+//     } else if (option === 'NumDown') {
+//         window.orderNumDown(listaPokemones);
+//         vaciar();
+//         imprimir(listaPokemones);
+//     }
+// }, false);
 //buscar pokemones por nombre o numero
 document.getElementById('btnBuscar').addEventListener("click", (event) => {
     event.preventDefault();
