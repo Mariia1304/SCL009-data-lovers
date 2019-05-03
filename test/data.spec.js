@@ -64,13 +64,13 @@ describe('filterName', () => {
   });
 });
 
-describe('orderAZ', () => {
+describe('sortData', () => {
 
   it('debería ser una función', () => {
-    assert.equal(typeof orderAZ, 'function');
-  });
-  it('deberia retornar objeto Bulbasaur, Charmander, Squirtle al seleccione ordenar de la A a la Z', () => {
-    assert.deepEqual(window.orderAZ(data, 'a.name > b.name'), [{
+    assert.equal(typeof window.sortData, 'function');
+  }); 
+  it('debería retornar data ordenada desde la Z hasta la A', () => {
+    assert.deepEqual(window.sortData(data,"AZ"), [{
       name: "Bulbasaur",
       num: "001",
       type: ["Grass", "Poison"]
@@ -86,21 +86,20 @@ describe('orderAZ', () => {
   })
 });
 
-// describe('orderZA', () => {
+// describe('orderB', () => {
 
 //   it('debería ser una función', () => {
-//     assert.equal(typeof orderAZ, 'function');
+//     assert.equal(typeof orderByNum, 'function');
 //   });
-//   it('deberia retornar objeto Squirtle, Charmander, Bulbasaur al ordenar de la Z a la A', () => {
-//     assert.deepEqual(window.orderZA(data), [{
-//       name: "Squirtle"
+//   it('deberia retornar objeto Bulbasaur, Charmander, Squirtle al ordenar del 1 al 151', () => {
+//     assert.deepEqual(window.orderByNum(data, 'NumUp'), [{
+//       name: "Bulbasaur"
 //     }, {
 //       name: "Charmander"
 //     }, {
-//       name: "Bulbasaur"
+//       name: "Squirtle"
 //     }])
-//   })
-// });
+// })});
 
 // describe('orderNumUp', () => {
 
@@ -133,4 +132,3 @@ describe('orderAZ', () => {
 //     }])
 //   })
 // });
-

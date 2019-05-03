@@ -51,50 +51,95 @@ const filterNum = (arr, condition) => {
 }
 window.filterNum = filterNum;
 
+//
+const sortData = (data, condition) => {
+    let arr = [];
+// de a/z
+    if (condition === "AZ") {
+        arr = data.sort(orderByName)
+    }
+    //de z/a
+    if (condition === "ZA") {
+        arr = data.sort(orderByName).reverse();
+    }
+    // del 1/151 
+    if (condition === "NumUp") {
+        arr = data.sort(orderByNum)
+    }
+    // del 151/1
+    if (condition === "NumDown") {
+        arr = data.sort(orderByNum).reverse();
+    }
+    return arr
 
-//oredenar AZ
-
-const orderAZ = (arr) => { 
-    arr.sort((a, b) => {
-        if (a.name > b.name) {
-            return 1;
-        }
-    });
 }
-window.orderAZ = orderAZ;
 
-
-//ordenar ZA
-const orderZA = (arr) => {
- arr.sort((a, b) => {
-        if (a.name < b.name) {
-            return 1;
-        }
-    });
+const orderByNum = (a, b) => {
+    if (a.num > b.num) {
+        return 1
+    }
+    return -1;
 }
-window.orderZA = orderZA;
-
-
-//oredenar numeros 1-151
-const orderNumUp = (arr) => {
-    arr.sort((a, b) => {
-        if (a.num > b.num) {
-            return 1;
-        }
-        return -1;
-    });
+//
+function orderByName(a, b) {
+    if (a.name > b.name) {
+        return 1
+    }
+    return -1;
 }
-window.orderNumUp = orderNumUp;
+
+window.sortData = sortData;
+
+// //oredenar AZ
+
+// const orderAZ = (arr) => { 
+//     arr.sort((a, b) => {
+//         if (a.name > b.name) {
+//             return 1;
+//         }
+//     });
+// }
+// window.orderAZ = orderAZ;
 
 
-//oredenar numeros 151 - 1
-const orderNumDown = (arr) => {
-    arr.sort((a, b) => {
-        if (a.num < b.num) {
-            return 1;
-        }
-        return -1;
-    });
+// //ordenar ZA
+// const orderZA = (arr) => {
+//  arr.sort((a, b) => {
+//         if (a.name < b.name) {
+//             return 1;
+//         }
+//     });
+// }
+// window.orderZA = orderZA;
 
-};
-window.orderNumDown = orderNumDown;
+
+// //oredenar numeros 1-151
+// const orderNumUp = (arr) => {
+//     arr.sort((a, b) => {
+//         if (a.num > b.num) {
+//             return 1;
+//         }
+//         return -1;
+//     });
+// }
+// window.orderNumUp = orderNumUp;
+
+
+// //oredenar numeros 151 - 1
+// const orderNumDown = (arr) => {
+//     arr.sort((a, b) => {
+//         if (a.num < b.num) {
+//             return 1;
+//         }
+//         return -1;
+//     });
+
+// };
+// window.orderNumDown = orderNumDown;
+
+// //
+// const ordernarData = (arr, condition) =>{
+//  if(condition === 'AZ'){
+//      return arr(orderAZ)
+//  }
+// };
