@@ -30,42 +30,43 @@
                 <div class="filtros-plegable">
                     <!--  <a href="" id="btn-filters"> -->
                     <section class="container-fluid filters_big">
-                        <div class="row">
-                            <div class="col-md-2" style="margin-top: 10px;">
-                                <select id="order" name="">
-                                    <option value="">
-                                        Ordenar
-                                    </option>
-                                    <option value="AZ">
-                                        de la A a la Z
-                                    </option>
-                                    <option value="ZA">
-                                        de la Z a la A
-                                    </option>
-                                    <option value="NumUp">
-                                        de 1 a 151
-                                    </option>
-                                    <option value="NumDown">
-                                        de 151 a 1
-                                    </option>
-                                </select>
-                            </div>
-                            <div class="col-md-8" style="margin-top: 10px;">
-                                <div class="row">
-                                    <ul id="botonesFiltros">
-                                    </ul>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2" style="margin-top: 10px;">
+                                    <select class="form-control" id="order">
+                                        <option value="">
+                                            Ordenar
+                                        </option>
+                                        <option value="AZ">
+                                            de la A a la Z
+                                        </option>
+                                        <option value="ZA">
+                                            de la Z a la A
+                                        </option>
+                                        <option value="NumUp">
+                                            de 1 a 151
+                                        </option>
+                                        <option value="NumDown">
+                                            de 151 a 1
+                                        </option>
+                                    </select>
                                 </div>
-                            </div>
-                            <div class="col-md-2" style="margin-top: 10px;">
-                                <div class="bnt-lim-ir">
-                                    <li class="btn btn-buscar" id="reload" type="">
-                                        <i class="fas fa-redo-alt">
-                                        </i>
-                                    </li>
+                                <div class="col-md-8" style="margin-top: 10px;">
+                                    <div class="row">
+                                        <ul id="botonesFiltros">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-top: 10px;">
+                                    <div class="bnt-lim-ir">
+                                        <li class="btn btn-buscar" id="reload" type="">
+                                            <i class="fas fa-redo-alt">
+                                            </i>
+                                        </li>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- -->
                     </section>
                 </div>
             </div>
@@ -78,6 +79,10 @@
                 </span>
             </button>
         </nav>
+        <div class="container">
+            <div id="calculo-agregado">
+            </div>
+        </div>
         <!-- </a> -->
         <section>
             <div class="row flex-center" id="tarjetas">

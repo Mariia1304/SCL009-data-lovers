@@ -156,3 +156,6 @@ h5 .pokeinfo {
 div.modal-backdrop.fade.show {
     display: none;
 }
+#calculo-agregado {
+    text-align: center;
+}

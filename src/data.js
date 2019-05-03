@@ -80,3 +80,23 @@ function orderByName(a, b) {
     return -1;
 }
 window.sortData = sortData;
+//calculo agregado
+// const data1 = [{
+//     name: "Charmander",
+//     num: "004",
+//     type: ["Fire"]
+// }, {
+//     name: "Bulbasaur",
+//     num: "001",
+//     type: ["Grass", "Poison"]
+// }, {
+//     name: "Squirtle",
+//     num: "007",
+//     type: ["Water"]
+// }]
+const percent = (arr) => {
+    let result = parseInt(arr.length / 151 * 100);
+    return result;
+}
+window.percent = percent;
+// percent(data1);

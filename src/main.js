@@ -8,7 +8,6 @@ let btnWeak = '';
 let btnFilters = '';
 //let evolution = '';
 let buscadorNombre = '';
-// let evolution = '';
 window.addEventListener('load', function() {
     imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
@@ -99,10 +98,7 @@ const createModal = (arr) => {
 
                                     <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
                                         <p></p>
-                                       
-
                                      </div>
-                                        
                                     </div>
                                     <div>
                                         <p>
@@ -215,12 +211,16 @@ const createBtnOfFilters = (arr) => {
             let datatype = window.filterType(listaPokemones, `${element}`);
             vaciar();
             imprimir(datatype);
+            let porcentaje = window.percent(datatype);
+            console.log(porcentaje);
+            document.getElementById('calculo-agregado').innerHTML = `<p>El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${element}.`;
         });
     })
 };
 //ordenar con evento del DOM
 let a = document.getElementById('order');
 a.addEventListener('change', function() {
+    document.getElementById('calculo-agregado').innerHTML = '';
     let option = a.value;
     let ordered = window.sortData(listaPokemones, option);
     vaciar();
