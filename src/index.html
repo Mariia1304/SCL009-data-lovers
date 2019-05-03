@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
         <title>
             Data Lovers
         </title>
@@ -32,43 +31,41 @@
                     <!--  <a href="" id="btn-filters"> -->
                     <section class="container-fluid filters_big">
                         <div class="row">
+                            <div class="col-md-2" style="margin-top: 10px;">
+                                <select id="order" name="">
+                                    <option value="">
+                                        Ordenar
+                                    </option>
+                                    <option value="AZ">
+                                        de la A a la Z
+                                    </option>
+                                    <option value="ZA">
+                                        de la Z a la A
+                                    </option>
+                                    <option value="NumUp">
+                                        de 1 a 151
+                                    </option>
+                                    <option value="NumDown">
+                                        de 151 a 1
+                                    </option>
+                                </select>
+                            </div>
                             <div class="col-md-8" style="margin-top: 10px;">
                                 <div class="row">
-                                    
                                     <ul id="botonesFiltros">
-                                        <!-- <div class="bnt-lim-ir">
-                                             <li class="btn btn-buscar" type="">
-                                                <i class="fas fa-arrow-circle-right">
-                                                </i>
-                                            </li>
-                                            <li class="btn btn-buscar" id="" type="">
-                                                <i class="fas fa-redo-alt">
-                                                </i>
-                                            </li>
-                                        </div> -->
                                     </ul>
                                 </div>
                             </div>
+                            <div class="col-md-2" style="margin-top: 10px;">
+                                <div class="bnt-lim-ir">
+                                    <li class="btn btn-buscar" id="reload" type="">
+                                        <i class="fas fa-redo-alt">
+                                        </i>
+                                    </li>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-2" style="margin-top: 10px;">
-                            <select id="orderType" name="">
-                                <option value="">
-                                    Ordenar
-                                </option>
-                                <option value="AZ">
-                                    de la A a la Z
-                                </option>
-                                <option value="ZA">
-                                    de la Z a la A
-                                </option>
-                                <option value="NumUp">
-                                    de 1 a 151
-                                </option>
-                                <option value="NumDown">
-                                    de 151 a 1
-                                </option>
-                            </select>
-                        </div>
+                        <!-- -->
                     </section>
                 </div>
             </div>

@@ -1,5 +1,4 @@
 /* Manejo del DOM */
-
 const listaPokemones = window.POKEMON.pokemon;
 const arrBtn = ['Fire', 'Bug', 'Water', 'Fighting', 'Poison', 'Ground', 'Fairy', 'Rock', 'Ghost', 'Ice', 'Electric', 'Steel', 'Dragon', 'Flying', 'Grass', 'Dark', 'Psychic', 'Normal'];
 let card = '';
@@ -148,7 +147,6 @@ const createBtnOfWeak = (arr) => {
         })
     }
 }
-
 // const createEvolution = (arr) => {
 //     arr.forEach((element) => {
 //         element.next_evolution.forEach(element => {
@@ -166,8 +164,6 @@ const createBtnOfWeak = (arr) => {
 //         document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
 //       evolution = '';
 //     };
-            
-
 // creamos botones de tipos dentro de modal
 const createBtnOfType = (arr) => {
     arr.forEach((element) => {
@@ -223,32 +219,19 @@ const createBtnOfFilters = (arr) => {
     })
 };
 //ordenar con evento del DOM
-let a = document.getElementById('orderType');
+let a = document.getElementById('order');
 a.addEventListener('change', function() {
     let option = a.value;
-    if (option === 'AZ') {
-        window.orderAZ(listaPokemones);
-        vaciar();
-        imprimir(listaPokemones);
-    } else if (option === 'ZA') {
-        window.orderZA(listaPokemones);
-        vaciar();
-        imprimir(listaPokemones);
-    } else if (option === 'NumUp') {
-        window.orderNumUp(listaPokemones);
-        vaciar();
-        imprimir(listaPokemones);
-    } else if (option === 'NumDown') {
-        window.orderNumDown(listaPokemones);
-        vaciar();
-        imprimir(listaPokemones);
-    }
+    let ordered = window.sortData(listaPokemones, option);
+    vaciar();
+    imprimir(ordered);
 }, false);
 //buscar pokemones por nombre o numero
 document.getElementById('btnBuscar').addEventListener("click", (event) => {
     event.preventDefault();
     buscadorNombre = document.getElementById('buscador').value;
     if (isNaN(buscadorNombre) === true) {
+        buscadorNombre = MaysPrimera(buscadorNombre.toLowerCase());
         let dataName = window.filterName(listaPokemones, buscadorNombre);
         vaciar();
         imprimir(dataName);
@@ -260,11 +243,20 @@ document.getElementById('btnBuscar').addEventListener("click", (event) => {
     document.getElementById('buscador').value = '';
     document.getElementById('buscador').focus();
 });
-// console.log(nextEvolution(listaPokemones));
+//converir primera letra de string en mayuscula
+function MaysPrimera(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+//recargar la pagina
+document.getElementById('reload').addEventListener('click', () => {
+    location.reload();
+})
+//console.log(nextEvolution(listaPokemones));
 // const nextEvolution = listaPokemones.filter(element => (element.next_evolution));
 // console.log(nextEvolution);
 //imprimir evolution
 // const createEvolution = (arr) => {
+//     console.log('hola');
 //     arr.forEach((element) => {
 //         element.next_evolution.forEach(element => {
 //             evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
@@ -276,3 +268,4 @@ document.getElementById('btnBuscar').addEventListener("click", (event) => {
 //     document.getElementById(`evoluciones${element.id}`).innerHTML = evolution;
 //     evolution = '';
 // };
+// createEvolution(listaPokemones);
