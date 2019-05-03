@@ -69,7 +69,7 @@ describe('sortData', () => {
   it('debería ser una función', () => {
     assert.equal(typeof window.sortData, 'function');
   }); 
-  it('debería retornar data ordenada desde la Z hasta la A', () => {
+  it('debería retornar data ordenada desde la A hasta la Z', () => {
     assert.deepEqual(window.sortData(data,"AZ"), [{
       name: "Bulbasaur",
       num: "001",
@@ -84,6 +84,55 @@ describe('sortData', () => {
       type: ["Water"]
     }])
   })
+});
+
+  it('debería retornar data ordenada desde la Z hasta la A', () => {
+    assert.deepEqual(window.sortData(data,"ZA"), [{
+        name: "Squirtle",
+        num: "007",
+        type: ["Water"]
+      },{
+      name: "Charmander",
+      num: "004",
+      type: ["Fire"]
+    }, {
+      name: "Bulbasaur",
+      num: "001",
+      type: ["Grass", "Poison"]
+    }])
+  });
+
+
+it('debería retornar data ordenada del 1 al 7', () => {
+  assert.deepEqual(window.sortData(data,"NumUp"), [{
+    name: "Bulbasaur",
+    num: "001",
+    type: ["Grass", "Poison"]
+  }, {
+    name: "Charmander",
+    num: "004",
+    type: ["Fire"]
+  }, {
+    name: "Squirtle",
+    num: "007",
+    type: ["Water"]
+  }])
+});
+
+it('debería retornar data ordenada del 7 al 1', () => {
+  assert.deepEqual(window.sortData(data,"NumDown"), [{
+      name: "Squirtle",
+      num: "007",
+      type: ["Water"]
+    },{
+    name: "Charmander",
+    num: "004",
+    type: ["Fire"]
+  }, {
+    name: "Bulbasaur",
+    num: "001",
+    type: ["Grass", "Poison"]
+  }])
 });
 
 // describe('orderB', () => {
