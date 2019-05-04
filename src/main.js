@@ -217,17 +217,23 @@ const createBtnOfFilters = (arr) => {
         });
     })
 };
-
 let a = document.getElementById('order');
-a.addEventListener('change', function() {
+let ordered;
+a.addEventListener('change', () => {
     document.getElementById('calculo-agregado').innerHTML = '';
     let option = a.value;
-    let ordered = window.sortData(listaPokemones, option);
+    if (option === 'AZ') {
+        ordered = window.sortData(listaPokemones, 'name', 'asc');
+    } else if (option === 'ZA') {
+        ordered = window.sortData(listaPokemones, 'name', 'desc');
+    } else if (option === 'NumUp') {
+        ordered = window.sortData(listaPokemones, 'num', 'asc');
+    } else if (option === 'NumDown') {
+        ordered = window.sortData(listaPokemones, 'num', 'desc');
+    }
     vaciar();
     imprimir(ordered);
 }, false);
-
-
 // //ordenar con evento del DOM
 // let a = document.getElementById('orderType');
 // a.addEventListener('change', function() {
