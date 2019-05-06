@@ -143,23 +143,6 @@ const createBtnOfWeak = (arr) => {
         })
     }
 }
-// const createEvolution = (arr) => {
-//     arr.forEach((element) => {
-//         element.next_evolution.forEach(element => {
-//                     evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-//                 <img alt="" class="img-fluid" src=""/>
-//                 ${element.next_evolution}
-//             </div>
-//             <div class="col-md-2 col-sm-2 ">
-//                 <img alt="" class="img-fluid" src=/>
-//             </div>
-//             <div class="col-md-2 col-sm-2 ">
-//                 <img alt="" class="img-fluid" src=/>
-//             </div>`
-//         })});
-//         document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
-//       evolution = '';
-//     };
 // creamos botones de tipos dentro de modal
 const createBtnOfType = (arr) => {
     arr.forEach((element) => {
@@ -181,23 +164,6 @@ const createBtnOfType = (arr) => {
         })
     }
 }
-// const createEvolution = (arr) => {
-//     arr.forEach((element) => {
-//         element.next_evolution.forEach(element => {
-//                     evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-//                 <img alt="" class="img-fluid" src=""/>
-//                 ${element.next_evolution}
-//             </div>
-//             <div class="col-md-2 col-sm-2 ">
-//                 <img alt="" class="img-fluid" src=/>
-//             </div>
-//             <div class="col-md-2 col-sm-2 ">
-//                 <img alt="" class="img-fluid" src=/>
-//             </div>`
-//         })});
-//         document.getElementById(`evoluciones${element.next_evolution}`).innerHTML = evolution;
-//       evolution = '';
-//     };
 // crear botones de filtros dinamicamente
 const createBtnOfFilters = (arr) => {
     arr.forEach((element) => {
@@ -212,44 +178,27 @@ const createBtnOfFilters = (arr) => {
             vaciar();
             imprimir(datatype);
             let porcentaje = window.percent(datatype);
-            console.log(porcentaje);
             document.getElementById('calculo-agregado').innerHTML = `<p>El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${element}.`;
         });
     })
 };
-
 let a = document.getElementById('order');
-a.addEventListener('change', function() {
+let ordered;
+a.addEventListener('change', () => {
     document.getElementById('calculo-agregado').innerHTML = '';
     let option = a.value;
-    let ordered = window.sortData(listaPokemones, option);
+    if (option === 'AZ') {
+        ordered = window.sortData(listaPokemones, 'name', 'asc');
+    } else if (option === 'ZA') {
+        ordered = window.sortData(listaPokemones, 'name', 'desc');
+    } else if (option === 'NumUp') {
+        ordered = window.sortData(listaPokemones, 'num', 'asc');
+    } else if (option === 'NumDown') {
+        ordered = window.sortData(listaPokemones, 'num', 'desc');
+    }
     vaciar();
     imprimir(ordered);
 }, false);
-
-
-// //ordenar con evento del DOM
-// let a = document.getElementById('orderType');
-// a.addEventListener('change', function() {
-//     ordenarData= a.value;
-//     if (ordenarData === 'AZ') {
-//         window.orderAZ(listaPokemones);
-//         vaciar();
-//         imprimir(listaPokemones);
-//     } else if (option === 'ZA') {
-//         window.orderZA(listaPokemones);
-//         vaciar();
-//         imprimir(listaPokemones);
-//     } else if (option === 'NumUp') {
-//         window.orderNumUp(listaPokemones);
-//         vaciar();
-//         imprimir(listaPokemones);
-//     } else if (option === 'NumDown') {
-//         window.orderNumDown(listaPokemones);
-//         vaciar();
-//         imprimir(listaPokemones);
-//     }
-// }, false);
 //buscar pokemones por nombre o numero
 document.getElementById('btnBuscar').addEventListener("click", (event) => {
     event.preventDefault();
