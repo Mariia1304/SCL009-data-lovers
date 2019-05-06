@@ -178,7 +178,6 @@ const createBtnOfFilters = (arr) => {
             vaciar();
             imprimir(datatype);
             let porcentaje = window.percent(datatype);
-            console.log(porcentaje);
             document.getElementById('calculo-agregado').innerHTML = `<p>El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${element}.`;
         });
     })
