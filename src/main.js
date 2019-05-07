@@ -175,7 +175,6 @@ const createBtnOfFilters = (arr) => {
                         </li>`;
     })
     document.getElementById('botonesFiltros').innerHTML = btnFilters;
-    createEvolution(nextEvolution);
     arr.forEach((element) => {
         document.getElementById(`${element}`).addEventListener('click', () => {
             datatype = window.filterType(listaPokemones, `${element}`);
@@ -235,11 +234,9 @@ const nextEvolution = listaPokemones.filter(element => (element.next_evolution))
 
 const createEvolution = (arr) => {
     arr.forEach((element) => {
-        let nombre;
         element.next_evolution.forEach(element => {
             nombre = element.name;
             let dataNombre = window.filterName(listaPokemones, nombre);
-            console.log(dataNombre[0].name);
             evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
                <p>${element.name}</p><img src=${dataNombre[0].img}>
            </div>`
