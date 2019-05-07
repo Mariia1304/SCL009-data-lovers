@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 .navbar {
     background-color: #1C408C;
 }
@@ -146,7 +148,16 @@
 }
 body {
     background-color: #DAF3E3;
+   font-family: 'Poppins', sans-serif;
+
 }
+
+.pokeinfo li .descripcion{
+    color: #224791;
+   font-family: 'Poppins', sans-serif;
+
+}
+
 .imagen-pokemon {
     border-style: double 2px
 }

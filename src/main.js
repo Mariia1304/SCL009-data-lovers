@@ -9,8 +9,8 @@ let btnWeak = '';
 let btnFilters = '';
 let buscadorNombre = '';
 window.addEventListener('load', function() {
-    createBtnOfFilters(arrBtn);
     imprimir(listaPokemones);
+    createBtnOfFilters(arrBtn);
 });
 const imprimir = (arr) => {
     createCards(arr);
@@ -39,7 +39,7 @@ const createCards = (arr) => {
                             Nº${element.num}
                         </p>
                         <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
-                        ver mas
+                        <i class="fas fa-eye"></i> <span class="descripcion">Ver mas:</span>
                         </a>
                     </div>
                 </div>`;
@@ -58,7 +58,7 @@ const createModal = (arr) => {
         modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${element.id}" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <div class="modal-header ${element.type[0]}">
+                            <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLongTitle">
                                     ${element.name} N° ${element.num}
                                 </h5>
@@ -77,22 +77,22 @@ const createModal = (arr) => {
                                         <div class="col-md-8 pokeinfo">
                                             <ul>
                                                 <li>
-                                                    <i class="fas fa-arrows-alt-v">
+                                                    <i class="fas fa-arrows-alt-v"> <span class="descripcion">Altura:</span>
                                                     </i>
                                                     ${element.height}
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-weight">
+                                                    <i class="fas fa-weight "> <span class="descripcion">Peso:</span>
                                                     </i>
                                                     ${element.weight}
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-candy-cane">
+                                                    <i class="fas fa-candy-cane"> <span class="descripcion">Candy:</span>
                                                     </i>
                                                     ${element.candy_count}
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-egg">
+                                                    <i class="fas fa-egg"> <span class="descripcion">Huevos:</span>
                                                     </i>
                                                     ${element.egg}
                                                 </li>
@@ -100,23 +100,25 @@ const createModal = (arr) => {
                                         </div>
                                     </div>
                                     <p>
-                                        Evolución:
+                                        evolucion
                                     </p>
                                     <div class="row" id="evoluciones${element.id}">
+
                                         <p class="container">
                                            No tiene mas evoluciones!
                                         </p>
+
                                     </div>
                                     <div>
                                         <p>
-                                            Tipos:
+                                            tipos
                                         </p>
                                         <div id="type${element.id}">
                                         </div>
                                     </div>
                                     <div>
                                         <p>
-                                           Debilidades:
+                                           debilidades
                                         </p>
                                         <div id= "weak${element.id}"> 
                                         </div>
@@ -231,6 +233,7 @@ function MaysPrimera(string) {
 document.getElementById('reload').addEventListener('click', () => {
     location.reload();
 })
+
 //imprimir evolution
 let evolution = '';
 const createEvolution = (arr) => {
@@ -251,3 +254,4 @@ const createEvolution = (arr) => {
     });
 };
 //createEvolution(nextEvolution);
+
