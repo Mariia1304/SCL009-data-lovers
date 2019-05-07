@@ -39,7 +39,7 @@ const createCards = (arr) => {
                             Nº${element.num}
                         </p>
                         <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
-                        <i class="fas fa-eye"></i> <span class="descripcion">Ver mas:</span>
+                        <i class="fas fa-eye"></i> <span class="descripcion">Ver mas</span>
                         </a>
                     </div>
                 </div>`;
@@ -58,7 +58,7 @@ const createModal = (arr) => {
         modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${element.id}" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
+                            <div class="modal-header ${element.type[0]}">
                                 <h5 class="modal-title" id="exampleModalLongTitle">
                                     ${element.name} N° ${element.num}
                                 </h5>
@@ -100,7 +100,7 @@ const createModal = (arr) => {
                                         </div>
                                     </div>
                                     <p>
-                                        evolucion
+                                        Evolucion
                                     </p>
                                     <div class="row" id="evoluciones${element.id}">
 
@@ -111,14 +111,14 @@ const createModal = (arr) => {
                                     </div>
                                     <div>
                                         <p>
-                                            tipos
+                                            Tipos
                                         </p>
                                         <div id="type${element.id}">
                                         </div>
                                     </div>
                                     <div>
                                         <p>
-                                           debilidades
+                                           Debilidades
                                         </p>
                                         <div id= "weak${element.id}"> 
                                         </div>
@@ -146,7 +146,7 @@ const createBtnOfWeak = (arr) => {
     for (let i = 0; i < x.length; i++) {
         x[i].addEventListener('click', () => {
             let valor = x[i].value;
-            let datatype = window.filterWeak(listaPokemones, valor);
+            datatype = window.filterWeak(datatype, valor);
             vaciar();
             imprimir(datatype);
         })
@@ -243,7 +243,7 @@ const createEvolution = (arr) => {
         element.next_evolution.forEach(element => {
             nombre = element.name;
             let dataNombre = window.filterName(listaPokemones, nombre);
-            console.log(dataNombre[0].name);
+            //console.log(dataNombre[0].name);
             evolution += `<div class="col-md-6 col-sm-6">
                <p>${element.name}:</p><img src=${dataNombre[0].img}>
            </div>

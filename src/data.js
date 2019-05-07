@@ -15,11 +15,7 @@ const filterWeak = (arr, condition) => {
 }
 window.filterWeak = filterWeak;
 //evolicion
-const nextEvolution = (arr) => {
-    const arrEvolution = arr.filter(el => el.next_evolution);
-    return arrEvolution;
-}
-window.nextEvolution = nextEvolution;
+
 // evolution
 // array con pokemones que tienen next_evolution
 // const nextEvolution = listaPokemones.filter(element => (element.next_evolution));

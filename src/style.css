@@ -152,10 +152,14 @@ body {
 
 }
 
-.pokeinfo li .descripcion{
+.descripcion{
     color: #224791;
    font-family: 'Poppins', sans-serif;
 
+}
+
+.fas{
+    color: #224791;
 }
 
 .imagen-pokemon {
