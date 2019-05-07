@@ -1,7 +1,7 @@
 /* Manejo del DOM */
 const listaPokemones = window.POKEMON.pokemon;
 const arrBtn = ['Fire', 'Bug', 'Water', 'Fighting', 'Poison', 'Ground', 'Fairy', 'Rock', 'Ghost', 'Ice', 'Electric', 'Steel', 'Dragon', 'Flying', 'Grass', 'Dark', 'Psychic', 'Normal'];
-let datatype= listaPokemones;
+let datatype = listaPokemones;
 let card = '';
 let modal = '';
 let btnType = '';
@@ -17,12 +17,14 @@ const imprimir = (arr) => {
     createModal(arr);
     createBtnOfWeak(arr);
     createBtnOfType(arr);
+    createEvolution(arr);
 };
 const vaciar = () => {
     card = '';
     modal = '';
     btnType = '';
     btnWeak = '';
+    evolution = '';
 }
 // creamos tarjetas:v          
 const createCards = (arr) => {
@@ -47,6 +49,12 @@ const createCards = (arr) => {
 // creamos modales
 const createModal = (arr) => {
     arr.forEach((element) => {
+        if (element.candy_count === undefined) {
+            element.candy_count = 'No come candies'
+        }
+        if (element.egg === 'Not in Eggs') {
+            element.egg = 'No nace en huevos'
+        }
         modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${element.id}" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -96,9 +104,10 @@ const createModal = (arr) => {
                                     </p>
                                     <div class="row" id="evoluciones${element.id}">
 
-                                    <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-                                        <p></p>
-                                     </div>
+                                        <p class="container">
+                                           No tiene mas evoluciones!
+                                        </p>
+
                                     </div>
                                     <div>
                                         <p>
@@ -178,14 +187,14 @@ const createBtnOfFilters = (arr) => {
             vaciar();
             imprimir(datatype);
             let porcentaje = window.percent(datatype);
-            document.getElementById('calculo-agregado').innerHTML = `<p>El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${element}.`;
+            document.getElementById('calculo-agregado').innerHTML = `<p id="porcentaje" class="${element}">El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${element}.</p>`;
         });
     })
 };
+//ordenamos la data
 let a = document.getElementById('order');
 let ordered;
 a.addEventListener('change', () => {
-    document.getElementById('calculo-agregado').innerHTML = '';
     let option = a.value;
     if (option === 'AZ') {
         ordered = window.sortData(datatype, 'name', 'asc');
@@ -225,20 +234,24 @@ document.getElementById('reload').addEventListener('click', () => {
     location.reload();
 })
 
-//const nextEvolution = listaPokemones.filter(element => (element.next_evolution));
-
 //imprimir evolution
+let evolution = '';
+const createEvolution = (arr) => {
+    const arrayEvolution = arr.filter(element => (element.next_evolution));
+    arrayEvolution.forEach((element) => {
+        let nombre;
+        element.next_evolution.forEach(element => {
+            nombre = element.name;
+            let dataNombre = window.filterName(listaPokemones, nombre);
+            console.log(dataNombre[0].name);
+            evolution += `<div class="col-md-6 col-sm-6">
+               <p>${element.name}:</p><img src=${dataNombre[0].img}>
+           </div>
+          `
+        });
+        document.getElementById(`evoluciones${element.id}`).innerHTML = evolution;
+        evolution = '';
+    });
+};
+//createEvolution(nextEvolution);
 
-// const createEvolution = (arr) => {
-//     arr.forEach((element) => {
-//         element.next_evolution.forEach(element => {
-//             nombre = element.name;
-//             let dataNombre = window.filterName(listaPokemones, nombre);
-//             evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-//                <p>${element.name}</p><img src=${dataNombre[0].img}>
-//            </div>`
-//         });
-//         document.getElementById(`evoluciones${element.id}`).innerHTML = evolution;
-//         evolution = '';
-//     });
-// };

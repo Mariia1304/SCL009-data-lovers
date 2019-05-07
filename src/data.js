@@ -6,7 +6,6 @@ const filterType = (arr, condition) => {
     return arrType;
 }
 window.filterType = filterType;
-
 //filtrar por debilidad
 const filterWeak = (arr, condition) => {
     const arrWeak = arr.filter(el => {
@@ -15,7 +14,6 @@ const filterWeak = (arr, condition) => {
     return arrWeak;
 }
 window.filterWeak = filterWeak;
-
 //evolicion
 const nextEvolution = (arr) => {
     const arrEvolution = arr.filter(el => el.next_evolution);
@@ -35,9 +33,6 @@ window.nextEvolution = nextEvolution;
 // }
 //window.filterEvolution = filterEvolution;
 //filtramos por nombre
-
-
-
 const filterName = (arr, condition) => {
     const arrName = arr.filter(el => {
         return el.name.includes(condition);
@@ -45,7 +40,6 @@ const filterName = (arr, condition) => {
     return arrName;
 }
 window.filterName = filterName;
-
 //filtrar por Num
 const filterNum = (arr, condition) => {
     const arrNum = arr.filter(el => {
@@ -54,7 +48,6 @@ const filterNum = (arr, condition) => {
     return arrNum;
 }
 window.filterNum = filterNum;
-
 // ordenar data
 const sortData = (data, sortBy, sortOrden) => {
     return data.sort((a, b) => {
@@ -69,11 +62,9 @@ const sortData = (data, sortBy, sortOrden) => {
     });
 }
 window.sortData = sortData;
-
 //calculo agregado
 const percent = (arr) => {
     let result = parseInt(arr.length / 151 * 100);
     return result;
 }
 window.percent = percent;
-
