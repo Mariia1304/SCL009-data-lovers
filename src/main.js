@@ -1,11 +1,13 @@
 /* Manejo del DOM */
 const listaPokemones = window.POKEMON.pokemon;
 const arrBtn = ['Fire', 'Bug', 'Water', 'Fighting', 'Poison', 'Ground', 'Fairy', 'Rock', 'Ghost', 'Ice', 'Electric', 'Steel', 'Dragon', 'Flying', 'Grass', 'Dark', 'Psychic', 'Normal'];
+let datatype= listaPokemones;
 let card = '';
 let modal = '';
 let btnType = '';
 let btnWeak = '';
 let btnFilters = '';
+let evolution = '';
 let buscadorNombre = '';
 let evolution = '';
 window.addEventListener('load', function() {
@@ -120,6 +122,8 @@ const createModal = (arr) => {
                 </div>`
     })
     document.getElementById('modal').innerHTML = modal;
+    createEvolution(nextEvolution)
+   
 }
 // creamos botones de debilidades dentro de modal
 const createBtnOfWeak = (arr) => {
@@ -173,7 +177,7 @@ const createBtnOfFilters = (arr) => {
     document.getElementById('botonesFiltros').innerHTML = btnFilters;
     arr.forEach((element) => {
         document.getElementById(`${element}`).addEventListener('click', () => {
-            let datatype = window.filterType(listaPokemones, `${element}`);
+            datatype = window.filterType(listaPokemones, `${element}`);
             vaciar();
             imprimir(datatype);
             let porcentaje = window.percent(datatype);
@@ -187,13 +191,13 @@ a.addEventListener('change', () => {
     document.getElementById('calculo-agregado').innerHTML = '';
     let option = a.value;
     if (option === 'AZ') {
-        ordered = window.sortData(listaPokemones, 'name', 'asc');
+        ordered = window.sortData(datatype, 'name', 'asc');
     } else if (option === 'ZA') {
-        ordered = window.sortData(listaPokemones, 'name', 'desc');
+        ordered = window.sortData(datatype, 'name', 'desc');
     } else if (option === 'NumUp') {
-        ordered = window.sortData(listaPokemones, 'num', 'asc');
+        ordered = window.sortData(datatype, 'num', 'asc');
     } else if (option === 'NumDown') {
-        ordered = window.sortData(listaPokemones, 'num', 'desc');
+        ordered = window.sortData(datatype, 'num', 'desc');
     }
     vaciar();
     imprimir(ordered);
@@ -223,6 +227,7 @@ function MaysPrimera(string) {
 document.getElementById('reload').addEventListener('click', () => {
     location.reload();
 })
+
 //imprimir evolution
 // const createEvolution = (arr) => {
 //     arr.forEach((element) => {
@@ -241,3 +246,4 @@ document.getElementById('reload').addEventListener('click', () => {
 //     });
 // };
 //createEvolution(nextEvolution);
+
