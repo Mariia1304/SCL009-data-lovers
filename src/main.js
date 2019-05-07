@@ -9,9 +9,10 @@ let btnWeak = '';
 let btnFilters = '';
 let evolution = '';
 let buscadorNombre = '';
+let evolution = '';
 window.addEventListener('load', function() {
-    imprimir(listaPokemones);
     createBtnOfFilters(arrBtn);
+    imprimir(listaPokemones);
 });
 const imprimir = (arr) => {
     createCards(arr);
@@ -51,7 +52,7 @@ const createModal = (arr) => {
         modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${element.id}" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
+                            <div class="modal-header ${element.type[0]}">
                                 <h5 class="modal-title" id="exampleModalLongTitle">
                                     ${element.name} N° ${element.num}
                                 </h5>
@@ -93,24 +94,23 @@ const createModal = (arr) => {
                                         </div>
                                     </div>
                                     <p>
-                                        evolucion
+                                        Evolución:
                                     </p>
                                     <div class="row" id="evoluciones${element.id}">
-
-                                    <div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-                                        <p></p>
-                                     </div>
+                                        <p class="container">
+                                           
+                                        </p>
                                     </div>
                                     <div>
                                         <p>
-                                            tipos
+                                            Tipos:
                                         </p>
                                         <div id="type${element.id}">
                                         </div>
                                     </div>
                                     <div>
                                         <p>
-                                           debilidades
+                                           Debilidades:
                                         </p>
                                         <div id= "weak${element.id}"> 
                                         </div>
@@ -228,20 +228,22 @@ document.getElementById('reload').addEventListener('click', () => {
     location.reload();
 })
 
-const nextEvolution = listaPokemones.filter(element => (element.next_evolution));
-
 //imprimir evolution
+// const createEvolution = (arr) => {
+//     arr.forEach((element) => {
+//         let nombre;
+//         element.next_evolution.forEach(element => {
+//             nombre = element.name;
+//             let dataNombre = window.filterName(listaPokemones, nombre);
+//             console.log(dataNombre[0].name);
+//             evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
+//                <p>${element.name}</p><img src=${dataNombre[0].img}>
+//            </div>
+//           `
+//         });
+//         document.getElementById(`evoluciones${element.id}`).innerHTML = evolution;
+//         evolution = '';
+//     });
+// };
+//createEvolution(nextEvolution);
 
-const createEvolution = (arr) => {
-    arr.forEach((element) => {
-        element.next_evolution.forEach(element => {
-            nombre = element.name;
-            let dataNombre = window.filterName(listaPokemones, nombre);
-            evolution += `<div class="col-md-2 offset-md-3 col-sm-2 offset-sm-3">
-               <p>${element.name}</p><img src=${dataNombre[0].img}>
-           </div>`
-        });
-        document.getElementById(`evoluciones${element.id}`).innerHTML = evolution;
-        evolution = '';
-    });
-};
