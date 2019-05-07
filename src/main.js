@@ -39,7 +39,7 @@ const createCards = (arr) => {
                             Nº${element.num}
                         </p>
                         <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
-                        <i class="fas fa-eye"></i> <span class="descripcion">Ver mas:</span>
+                        <i class="fas fa-eye"></i> <span class="descripcion">Ver mas</span>
                         </a>
                     </div>
                 </div>`;
@@ -58,11 +58,13 @@ const createModal = (arr) => {
         modal += `<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="modal${element.id}" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">
-                                    ${element.name} N° ${element.num}
-                                </h5>
-                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <div class="modal-header ${element.type[0]}">
+                            <li  style="list-style-image: url(img/pokeball2.gif)"></li>
+                                <h4 class="modal-title" id="exampleModalLongTitle">
+
+                                ${element.name} N° ${element.num} 
+                                </h4>
+                                <button style="margin-left:0px" aria-label="Close" class="close" data-dismiss="modal" type="button">
                                     <span aria-hidden="true">
                                         ×
                                     </span>
@@ -70,56 +72,56 @@ const createModal = (arr) => {
                             </div>
                             <div class="modal-body">
                                 <div class="grid">
-                                    <div class="row">
+                                    <div class="row row__modal">
                                         <div class="col-md-4">
-                                            <img alt="" class="imagen-pokemon" src="${element.img}"/>
+                                            <img alt="pokemon" class="imagen-pokemon" src="${element.img}"/>
                                         </div>
                                         <div class="col-md-8 pokeinfo">
                                             <ul>
                                                 <li>
-                                                    <i class="fas fa-arrows-alt-v"> <span class="descripcion">Altura:</span>
-                                                    </i>
+                                                    <i class="fas fa-arrows-alt-v">
+                                                    </i><span class="descripcion">Altura: </span>
                                                     ${element.height}
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-weight "> <span class="descripcion">Peso:</span>
-                                                    </i>
+                                                    <i class="fas fa-weight "> 
+                                                    </i><span class="descripcion">Peso:</span>
                                                     ${element.weight}
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-candy-cane"> <span class="descripcion">Candy:</span>
-                                                    </i>
+                                                    <i class="fas fa-candy-cane"> 
+                                                    </i><span class="descripcion">Candy:</span>
                                                     ${element.candy_count}
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-egg"> <span class="descripcion">Huevos:</span>
-                                                    </i>
+                                                    <i class="fas fa-egg">
+                                                    </i> <span class="descripcion">Huevos:</span>
                                                     ${element.egg}
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <p>
-                                        evolucion
-                                    </p>
-                                    <div class="row" id="evoluciones${element.id}">
-
-                                        <p class="container">
+                                    <h5>
+                                        Evoluciones:
+                                    </h5>
+                                    <div class="row container" id="evoluciones${element.id}">
+                                        
+                                        <p class="container p__nombre">
                                            No tiene mas evoluciones!
                                         </p>
 
                                     </div>
-                                    <div>
-                                        <p>
-                                            tipos
-                                        </p>
+                                    <div class="tipos__debilidades">
+                                       <h5>
+                                            Tipos:
+                                        </h5>
                                         <div id="type${element.id}">
                                         </div>
                                     </div>
-                                    <div>
-                                        <p>
-                                           debilidades
-                                        </p>
+                                    <div class="tipos__debilidades">
+                                       <h5>
+                                           Debilidades:
+                                        </h5>
                                         <div id= "weak${element.id}"> 
                                         </div>
                                     </div>
@@ -233,7 +235,6 @@ function MaysPrimera(string) {
 document.getElementById('reload').addEventListener('click', () => {
     location.reload();
 })
-
 //imprimir evolution
 let evolution = '';
 const createEvolution = (arr) => {
@@ -243,9 +244,8 @@ const createEvolution = (arr) => {
         element.next_evolution.forEach(element => {
             nombre = element.name;
             let dataNombre = window.filterName(listaPokemones, nombre);
-            console.log(dataNombre[0].name);
             evolution += `<div class="col-md-6 col-sm-6">
-               <p>${element.name}:</p><img src=${dataNombre[0].img}>
+               <p class="p__nombre">${element.name}:</p><center><img src=${dataNombre[0].img}></center>
            </div>
           `
         });
@@ -254,4 +254,3 @@ const createEvolution = (arr) => {
     });
 };
 //createEvolution(nextEvolution);
-
