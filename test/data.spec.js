@@ -2,6 +2,7 @@ global.window = global;
 global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
+
 const data = [{
     name: "Charmander",
     num: "004",
@@ -69,7 +70,7 @@ describe('sortData', () => {
             num: "007",
             type: ["Water"]
         }])
-    });
+    }); 
     it('debería retornar objetos Squirtle, Charmander,Bulbasaur al ordenar de la Z a la A', () => {
         assert.deepEqual(window.sortData(data, 'name', 'desc'), [{
             name: "Squirtle",
@@ -122,10 +123,6 @@ describe('percent', () => {
         assert.equal(typeof percent, 'function');
     });
     it('deberia retornar "El 1% de los pokemones de la región Kanto son de tipo Grass."', () => {
-        assert.deepEqual(window.filterType(data, 'Grass'), [{
-            name: "Bulbasaur",
-            num: "001",
-            type: ["Grass", "Poison"],
-        }])
-    });
+        assert.deepEqual(window.percent(data), 1
+    )});
 });
