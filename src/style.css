@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
 .navbar {
     background-color: #1C408C;
 }
@@ -60,7 +59,7 @@
 #tarjetas .card-title {
     margin-bottom: 0;
 }
-#tarjetas .card-body h5, .card-body p {
+h5, .card-body p {
     color: #274A86;
 }
 .imagen-pokemon {
@@ -148,20 +147,17 @@
 }
 body {
     background-color: #DAF3E3;
-   font-family: 'Poppins', sans-serif;
-
+    font-family: 'Poppins', sans-serif;
 }
-
-.descripcion{
+.pokeinfo li .descripcion {
+    margin-right: 10px;
     color: #224791;
-   font-family: 'Poppins', sans-serif;
-
+    font-family: 'Poppins', sans-serif;
 }
-
-.fas{
+.fas {
+    margin-right: 10px;
     color: #224791;
 }
-
 .imagen-pokemon {
     border-style: double 2px
 }
@@ -183,4 +179,20 @@ div.modal-backdrop.fade.show {
 .modal-title {
     color: white;
     text-shadow: 2px 2px gray;
+}
+.row__modal {
+    margin-bottom: 15px;
+}
+.tipos__debilidades {
+    margin-top: 15px;
+}
+.p__nombre {
+    margin-bottom: 0px;
+    text-align: center;
+}
+.pokeinfo ul {
+    list-style: none;
+}
+.modal-open {
+    overflow: visible;
 }
