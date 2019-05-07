@@ -116,16 +116,11 @@ describe('sortData', () => {
         }])
     });
 });
-
 describe('percent', () => {
     it('debería ser una función', () => {
         assert.equal(typeof percent, 'function');
     });
     it('deberia retornar "El 1% de los pokemones de la región Kanto son de tipo Grass."', () => {
-        assert.deepEqual(window.filterType(data, 'Grass'), [{
-            name: "Bulbasaur",
-            num: "001",
-            type: ["Grass", "Poison"],
-        }])
+        assert.deepEqual(window.percent(data), 1);
     });
 });

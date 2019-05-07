@@ -147,9 +147,6 @@
 body {
     background-color: #DAF3E3;
 }
-h5 .pokeinfo {
-    color: #224791;
-}
 .imagen-pokemon {
     border-style: double 2px
 }
@@ -158,4 +155,17 @@ div.modal-backdrop.fade.show {
 }
 #calculo-agregado {
     text-align: center;
+}
+#porcentaje {
+    margin-top: 10px;
+    padding: 10px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px gray;
+}
+.modal-title {
+    color: white;
+    text-shadow: 2px 2px gray;
 }
