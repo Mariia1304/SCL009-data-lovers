@@ -148,10 +148,14 @@ h5, .card-body p {
 body {
     background-color: #DAF3E3;
     font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 .pokeinfo li .descripcion {
     margin-right: 10px;
     color: #224791;
+   
+}
+.descripcion{
     font-family: 'Poppins', sans-serif;
 }
 .fas {

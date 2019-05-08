@@ -107,7 +107,7 @@ const createModal = (arr) => {
                                     <div class="row container" id="evoluciones${element.id}">
                                         
                                         <p class="container p__nombre">
-                                           No tiene mas evoluciones!
+                                          - No tiene más evoluciones -
                                         </p>
 
                                     </div>
