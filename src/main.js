@@ -245,12 +245,20 @@ const createEvolution = (arr) => {
             nombre = element.name;
             let dataNombre = window.filterName(listaPokemones, nombre);
             evolution += `<div class="col-md-6 col-sm-6">
-               <p class="p__nombre">${element.name}:</p><center><img src=${dataNombre[0].img}></center>
+               <p class="p__nombre">${element.name}:</p><center><button class="pokemones" value="${element.name}" href=""><img src=${dataNombre[0].img}></button></center>
            </div>
           `
         });
         document.getElementById(`evoluciones${element.id}`).innerHTML = evolution;
         evolution = '';
     });
+    let x = document.getElementsByClassName('pokemones');
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener('click', () => {
+            let valor = x[i].value;
+            datatype = window.filterName(datatype, valor);
+            vaciar();
+            imprimir(datatype);
+        })
+    }
 };
-//createEvolution(nextEvolution);
