@@ -50,8 +50,8 @@ describe('filterName', () => {
   it('debería ser una función', () => {
     assert.equal(typeof filterName, 'function');
   });
-  it('deberia retornar objeto Bulbasaur al filtrar por debilidad Grass', () => {
-    assert.deepEqual(window.filterType(data, 'Grass'), [{
+  it('deberia retornar objeto Bulbasaur al filtrar por nombre Bulbasaur', () => {
+    assert.deepEqual(window.filterType(data, "Bulbasaur"), [{
         name: "Bulbasaur",
         num: "001",
         type: ["Grass", "Poison"],
