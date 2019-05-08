@@ -180,6 +180,9 @@ div.modal-backdrop.fade.show {
     color: white;
     text-shadow: 2px 2px gray;
 }
+.modal-header {
+    padding-bottom: 5px;
+}
 .row__modal {
     margin-bottom: 15px;
 }
