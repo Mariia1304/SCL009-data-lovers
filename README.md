@@ -41,7 +41,7 @@ Para lograrlo, nuestro usuario deberia:
 * Ingresar a la página **Pokédex**
 * Presionar botón filtros
 * Presionar botón Water
-* Nuestra página nos entrega el porcentaje de cuantos Pokémones son de tipo Water
+* La página nos entrega el porcentaje de cuantos Pokémones son de tipo Water
 
 
 
@@ -53,12 +53,21 @@ En un principio nuestro proyecto filtraba por tipo y debilidad. Incluida un busc
 
 Aqui las fotos de nuestro prototipo de baja fidelidad. 
 
-(fotos)
+![Prop-baja](https://i.ibb.co/VQzxSQ4/Imagen-de-i-OS-4.jpg)
+![Prop-baja](https://i.ibb.co/5jnmWL6/Imagen-de-i-OS.jpg)
+![Prop-baja](https://i.ibb.co/Fqpqsky/Imagen-de-i-OS-1.jpg)
+![Prop-baja](https://i.ibb.co/rfXDjL3/Imagen-de-i-OS-2.jpg)
+![Prop-baja](https://i.ibb.co/j4kqWJ3/Imagen-de-i-OS-3.jpg)
 
-Y aqui nuestro proyecto de alta fidelidad que muestra como relamente quedemos que se vea nuestro proyecto.
+Y aqui nuestro proyecto de alta fidelidad que mostraria como quisimos que se viera nuestro proyecto.
 
-(fotos o lo que sea)
+![Prop-alta](https://i.ibb.co/3c8wP4D/New-Project-3.png)
 
+Elegimos los colores basandonos en la paleta de colores de _PokemonGo_ 
+
+![pokemonGo](https://i.ibb.co/Rhrpsv3/pokemon-go.jpg)
+
+Utilizamos la web _colormind_ para obtener la paleta de colores
 
 ### Testeos de usuarios 
 
