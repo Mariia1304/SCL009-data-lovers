@@ -69,6 +69,8 @@ Elegimos los colores basandonos en la paleta de colores de _PokemonGo_
 
 Utilizamos la web _colormind_ para obtener la paleta de colores
 
+![colormind](https://i.ibb.co/r0V6JMp/Captura-de-pantalla-de-2019-05-09-18-58-19.png)
+
 ### Testeos de usuarios 
 
 Al realizar test de usuario, nos dimos cuenta de lo siguiente:
