@@ -8,6 +8,10 @@ body {
 .navbar {
     background-color: #1C408C;
 }
+.filters_big {
+    width: 100%;
+    background-color: #E8E17E;
+}
 .btn-buscar {
     background-color: #E8E17E;
     color: #274A86;
