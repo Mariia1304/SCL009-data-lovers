@@ -200,3 +200,7 @@ div.modal-backdrop.fade.show {
     border-color: transparent;
     background-color: transparent;
 }
+#sticky-footer {
+    margin-top: 10px;
+    background-color: #1C408C;
+}
