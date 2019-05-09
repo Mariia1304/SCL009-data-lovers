@@ -21,10 +21,6 @@ body {
     }
 }
 
-.filters_big {
-    width: 100%;
-    background-color: #E8E17E;
-}
 
 #tarjetas .card-body {
     padding: 0px;
@@ -193,9 +189,9 @@ div.modal-backdrop.fade.show {
     border-color: transparent;
     background-color: transparent;
 }
-#fin-pagina{
-    text-align: center;
-    color: #E8E17E;
-    background-color: #1C408C;
+
+#sticky-footer {
     margin-top: 10px;
+    background-color: #1C408C;
 }
+
