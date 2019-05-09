@@ -8,10 +8,6 @@ body {
 .navbar {
     background-color: #1C408C;
 }
-.filters_big {
-    width: 100%;
-    background-color: #E8E17E;
-}
 .btn-buscar {
     background-color: #E8E17E;
     color: #274A86;
@@ -27,6 +23,10 @@ body {
 }
 /*main: seccion de botones de filtros*/
 
+.filters_big {
+    width: 100%;
+    background-color: #E8E17E;
+}
 .filter-list {
     width: 90px;
     margin: 5px;
@@ -128,6 +128,9 @@ body {
         width: 100%;
         margin-top: 10px;
         margin-bottom: 5px;
+    }
+    #reload {
+        margin-top: 5px;
     }
 }
 @media (min-width: 577px) and (max-width: 768px) {
