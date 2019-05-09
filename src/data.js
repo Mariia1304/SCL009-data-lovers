@@ -32,41 +32,25 @@ const filterNum = (arr, condition) => {
 window.filterNum = filterNum;
 // ordenar data
 const sortData = (data, sortBy, sortOrder) => {
-   let sortPokemones = [];
-   if(sortBy == "name"){
-       if(sortOrder == "asc"){
-           sortPokemones = data.sort((a,b) => a.name.localeCompare(b.name));
-       }
-       else if(sortOrder == "desc"){
-           sortPokemones= data.sort((a,b) => a.name.localeCompare(b.name)).reverse();
-       }
-       return sortPokemones;
-   }
-   if(sortBy == "num"){
-    if(sortOrder == "asc"){
-        sortPokemones = data.sort((a,b) => a.num.localeCompare(b.num));
+    let sortPokemones = [];
+    if (sortBy == "name") {
+        if (sortOrder == "asc") {
+            sortPokemones = data.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (sortOrder == "desc") {
+            sortPokemones = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+        }
+        return sortPokemones;
     }
-    else if(sortOrder == "desc"){
-        sortPokemones= data.sort((a,b) => a.num.localeCompare(b.num)).reverse();
+    if (sortBy == "num") {
+        if (sortOrder == "asc") {
+            sortPokemones = data.sort((a, b) => a.num.localeCompare(b.num));
+        } else if (sortOrder == "desc") {
+            sortPokemones = data.sort((a, b) => a.num.localeCompare(b.num)).reverse();
+        }
+        return sortPokemones;
     }
-    return sortPokemones;
 }
-   }
-   window.sortData = sortData;
- 
-//     return data.sort((a, b) => {
-//         let x = a[sortBy],
-//             y = b[sortBy];
-//         if (sortOrden === 'asc') {
-//             return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-//         }
-//         if (sortOrden === 'desc') {
-//             return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-//         }
-//     });
-// }
-// window.sortData = sortData;
-//calculo agregado
+window.sortData = sortData;
 const percent = (arr) => {
     let result = parseInt(arr.length / 151 * 100);
     return result;
