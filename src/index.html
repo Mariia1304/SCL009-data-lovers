@@ -17,14 +17,13 @@
                     <img alt="fuente-pokemon" class="img-fluid" src="img/letrapokemon.png"/>
                 </a>
                 <form class="form-inline">
-                    <input aria-label="Search" class="form-control mr-sm-2" id="buscador" placeholder="Nombre o número de Pokémon" type="search"/>
+                    <input aria-label="Search" class="form-control mr-sm-2" id="buscador" placeholder="Nombre o número" type="search"/>
                     <button class="btn btn-buscar" id="btnBuscar">
                         <i class="fas fa-search">
                         </i>
                     </button>
                     <button class="btn btn-buscar" data-target="#modalAbout" data-toggle="modal" id="btnModalInfo" type="button">
-                        <i class="fas fa-info-circle">
-                        </i>
+                        <i class="fas fa-info-circle"></i>
                     </button>
                 </form>
             </nav>
@@ -34,10 +33,12 @@
             <section>
                 <div class="collapse" id="navbarToggleExternalContent">
                     <div class="container-fluid filters_big">
-                        <div class="col-md-10 offset-md-1">
-                            <div class="row">
-                                <ul id="botonesFiltros">
-                                </ul>
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="row">
+                                    <ul id="botonesFiltros">
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -71,7 +72,7 @@
                         </option>
                     </select>
                     <button class="btn btn-buscar" id="reload">
-                        <i class="fas fa-chevron-circle-left">
+                       <i class="fas fa-chevron-circle-left">
                         </i>
                         Limpiar
                     </button>
@@ -101,6 +102,7 @@
             </section>
         </main>
         <footer class="py-4 text-white-50">
+
             <div class="container text-center">
                 <small>
                     Todos derechos reservados © Pokedex by Poketeam

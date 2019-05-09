@@ -39,7 +39,7 @@ const createCards = (arr) => {
                             Nº${element.num}
                         </p>
                         <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
-                        <i class="fas fa-angle-double-right"></i></i><span class="descripcion">Ver</span>
+                        <i class="fas fa-angle-double-right" style="margin-right: 5px";></i></i><span class="descripcion">Ver</span>
                         </a>
                     </div>
                 </div>`;
