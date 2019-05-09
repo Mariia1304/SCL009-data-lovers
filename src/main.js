@@ -39,7 +39,7 @@ const createCards = (arr) => {
                             Nº${element.num}
                         </p>
                         <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
-                        <i class="fas fa-info-circle"></i><span class="descripcion">Ver</span>
+                        <i class="fas fa-angle-double-right"></i></i><span class="descripcion">Ver</span>
                         </a>
                     </div>
                 </div>`;
@@ -151,6 +151,7 @@ const createBtnOfWeak = (arr) => {
             datatype = window.filterWeak(listaPokemones, valor);
             vaciar();
             imprimir(datatype);
+            document.getElementById('calculo-agregado').innerHTML = '';
         })
     }
 }
@@ -172,6 +173,8 @@ const createBtnOfType = (arr) => {
             datatype = window.filterType(listaPokemones, valor);
             vaciar();
             imprimir(datatype);
+            let porcentaje = window.percent(datatype);
+            document.getElementById('calculo-agregado').innerHTML = `<p id="porcentaje" class="${valor}">El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${valor}.</p>`;
         })
     }
 }
@@ -185,7 +188,7 @@ const createBtnOfFilters = (arr) => {
     document.getElementById('botonesFiltros').innerHTML = btnFilters;
     arr.forEach((element) => {
         document.getElementById(`${element}`).addEventListener('click', () => {
-            datatype = window.filterType(datatype, `${element}`);
+            datatype = window.filterType(listaPokemones, `${element}`);
             vaciar();
             imprimir(datatype);
             let porcentaje = window.percent(datatype);
@@ -268,8 +271,11 @@ document.getElementById('btnModalInfo').addEventListener('click', () => {
                         <div class="modal-dialog modal-dialog-scrollable" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
+            
                                     <h5 class="modal-title" id="exampleModalScrollableTitle">
-                                        Modal title
+                                    <i class="fas fa-info-circle">
+                                    </i>
+                                        PokéDex Info
                                     </h5>
                                     <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                         <span aria-hidden="true">
@@ -278,7 +284,7 @@ document.getElementById('btnModalInfo').addEventListener('click', () => {
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quisquam excepturi ullam eius aspernatur molestias similique minima expedita molestiae odit fugit velit nemo mollitia id doloremque, recusandae illum esse beatae culpa reprehenderit ut voluptatibus saepe. Corporis, voluptates libero quia minus cupiditate delectus laboriosam. Illo non necessitatibus nesciunt saepe laboriosam voluptatem harum iste aliquid quisquam quae nobis doloribus recusandae magnam, sequi aliquam debitis error ea asperiores. Placeat voluptate nesciunt minima, minus accusamus voluptatibus, necessitatibus animi aliquam reprehenderit dolorum, quo, quod sequi labore saepe expedita beatae. Eveniet harum alias tempore maiores laudantium, consequatur. Ad praesentium, veritatis laborum facere beatae temporibus dignissimos. Corporis.
+                                    En esta página podras encontrar informacion sobre los Pokémones de la región Kanto. Podrás hacer busquedas por nombre o ID de Pokémon y realizar un filtro de Pokémones por tipo.
                                 </div>
                             </div>
                         </div>

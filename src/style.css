@@ -1,3 +1,5 @@
+/*Global*/
+
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 body {
     background-image: url("https://i.ibb.co/pZRWxNv/pokebolas.png");
@@ -7,10 +9,6 @@ body {
 
 .navbar {
     background-color: #1C408C;
-}
-.filters_big {
-    width: 100%;
-    background-color: #E8E17E;
 }
 .btn-buscar {
     background-color: #E8E17E;
@@ -27,6 +25,10 @@ body {
 }
 /*main: seccion de botones de filtros*/
 
+.filters_big {
+    width: 100%;
+    background-color: #E8E17E;
+}
 .filter-list {
     width: 90px;
     margin: 5px;
@@ -129,6 +131,9 @@ body {
         margin-top: 10px;
         margin-bottom: 5px;
     }
+    #reload {
+        margin-top: 5px;
+    }
 }
 @media (min-width: 577px) and (max-width: 768px) {
     .form-control#order {
@@ -230,9 +235,24 @@ div.modal-backdrop.fade.show {
     padding: 10px;
     border: solid 3px transparent;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     text-shadow: 2px 2px gray;
+}
+@media (max-width: 576px) {
+    #porcentaje {
+        font-size: 15px;
+    }
+}
+/*seccion modalAbout*/
+
+#modalAbout .modal-header {
+    background-color: #E8E17E;
+    color: #1C408C;
+}
+#modalAbout .modal-header h5 {
+    color: #1C408C;
+    text-shadow: 1px 1px white;
 }
 /*footer*/
 
