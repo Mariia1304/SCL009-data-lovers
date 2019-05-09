@@ -22,37 +22,38 @@
                         <i class="fas fa-search">
                         </i>
                     </button>
+                    <button class="btn btn-buscar" data-target="#modalAbout" data-toggle="modal" id="btnModalInfo" type="button">
+                        About
+                    </button>
                 </form>
             </nav>
         </header>
         <main>
-        <div class="btn-plegable">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="filtros-plegable">
-                    <!--  <a href="" id="btn-filters"> -->
-                    <section class="container-fluid filters_big">
-                        <div class="container" data-target="#">
-                            <div class="row">
-                                <div class="col-md-11" style="margin-top: 10px;">
-                                    <div class="row">
-                                        <ul id="botonesFiltros">
-                                        </ul>
-                                    </div>
+            <!-- seccion de botones de filtros -->
+            <section>
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="container-fluid filters_big">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="row">
+                                    <ul id="botonesFiltros">
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-dark navbar-filters">
-            <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon">
-                </span>
-                <span id="titulo-filtros"> Filtros
-                </span>
-            </button>
-            <div class="col-md-2" style="margin-top: 10px;">
+            </section>
+            <!-- seccion de ordenar/limpiar/filtrar -->
+            <section>
+                <nav class="navbar navbar-dark navbar-filters">
+                    <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
+                        <span class="navbar-toggler-icon">
+                        </span>
+                        <span id="titulo-filtros">
+                            Filtros
+                        </span>
+                    </button>
                     <select class="form-control" id="order">
                         <option value="">
                             Ordenar
@@ -70,31 +71,38 @@
                             de 151 a 1
                         </option>
                     </select>
+                    <button class="btn btn-buscar" id="reload">
+                       <i class="fas fa-chevron-circle-left">
+                        </i>
+                        Limpiar
+                    </button>
+                </nav>
+            </section>
+            <!-- seccion con calculo agregado -->
+            <section>
+                <div class="container">
+                    <div id="calculo-agregado">
+                    </div>
                 </div>
-            <div class="bnt-lim-ir">
-                <button class="btn btn-buscar" id="reload">
-                        <i class="fas fa-chevron-circle-left">
-                        <span class="descripcion">
-                            Limpiar
-                        </span>
-                    </i>
-                </button>
-            </div>
-        </nav>
-        <div class="container">
-            <div id="calculo-agregado">
-            </div>
-        </div>
-        <!-- </a> -->
-        <section>
-            <div class="row flex-center" id="tarjetas">
-            </div>
-        </section>
+            </section>
+            <!-- seccion con tarjetas pokemon -->
+            <section>
+                <div class="row flex-center" id="tarjetas">
+                </div>
+            </section>
+            <!-- seccion de modales -->
+            <section>
+                <div id="modal">
+                </div>
+            </section>
+            <!-- seccion de modal About -->
+            <section>
+                <div id="modalInfo">
+                </div>
+            </section>
+        </main>
+        <footer class="py-4 text-white-50">
 
-        <!-- Modal -->
-        <div id="modal">
-        </div>
-        <footer class="py-4 text-white-50" id="sticky-footer">
             <div class="container text-center">
                 <small>
                     Todos derechos reservados © Pokedex by Poketeam
@@ -118,5 +126,4 @@
         <script src="main.js">
         </script>
     </body>
-
 </html>
