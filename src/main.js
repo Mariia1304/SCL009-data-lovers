@@ -59,7 +59,7 @@ const createModal = (arr) => {
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header ${element.type[0]}">
-                            <li  style="list-style-image: url(img/pokeball2.gif)"></li>
+                            <ul><li  style="list-style-image: url(img/pokeball2.gif)"></li></ul>
                                 <h4 class="modal-title" id="exampleModalLongTitle">
 
                                 ${element.name} N° ${element.num} 
