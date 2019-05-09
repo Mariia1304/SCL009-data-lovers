@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 body {
-    background-color: #DAF3E3;
+    background-image: url("https://i.ibb.co/pZRWxNv/pokebolas.png");
     font-family: 'Poppins', sans-serif;
 }
 /*header*/
@@ -27,8 +27,16 @@ body {
 }
 /*main: seccion de botones de filtros*/
 
+.filter-list {
+    width: 90px;
+    margin: 5px;
+}
 #botonesFiltros {
     margin-top: 10px;
+}
+.filters_big {
+    width: 100%;
+    background-color: #E8E17E;
 }
 .Bug {
     background-color: #729f3f;
@@ -90,6 +98,52 @@ body {
 .Water {
     background-color: #4592c4;
 }
+/*seccion de ordenar/limpiar/filtrar*/
+
+.navbar-filters {
+    background-color: #E8E17E;
+}
+.navbar-dark .navbar-toggler {
+    color: rgba(39, 74, 134, .7);
+    border: solid 2px rgba(39, 74, 134, .7);
+    font-size: 1.1rem;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(39, 74, 134, .7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+#reload .fas {
+    margin-right: 3px;
+}
+#reload.btn {
+    padding: .3rem .75rem;
+}
+.form-control#order {
+    border: solid 2px rgba(39, 74, 134, .7);
+    margin-bottom: 3px;
+    margin-top: 3px;
+    width: 20%;
+}
+@media (max-width: 576px) {
+    .form-control#order {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .form-control#order {
+        width: 40%;
+        margin-top: 5px;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .form-control#order {
+        width: 30%;
+        margin-top: 5px;
+    }
+}
+/*seccion de tarjetas*/
+
 #tarjetas .card-body {
     padding: 0px;
     text-align: center;
@@ -123,50 +177,20 @@ h5, .card-body p {
 }
 .imagen-pokemon {
     grid-row: auto;
-}
-.navbar-filters {
-    background-color: #E8E17E;
-}
-.navbar-dark .navbar-toggler {
-    color: rgba(39, 74, 134, .7);
-    border: solid 2px rgba(39, 74, 134, .7);
-    font-size: 1.1rem;
-}
-.navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(39, 74, 134, .7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-.filter-list {
-    width: 90px;
-    margin: 5px;
+    border-style: double 2px;
 }
 .pokeinfo li .descripcion {
     margin-right: 10px;
     color: #224791;
 }
-.descripcion {
-    font-family: 'Poppins', sans-serif;
-}
 .fas {
     margin-right: 10px;
     color: #224791;
 }
-.imagen-pokemon {
-    border-style: double 2px
-}
+/* seccion de modales de pokemones*/
+
 div.modal-backdrop.fade.show {
     display: none;
-}
-#calculo-agregado {
-    text-align: center;
-}
-#porcentaje {
-    margin-top: 10px;
-    padding: 10px;
-    border: solid 3px transparent;
-    border-radius: 5px;
-    font-size: 25px;
-    color: white;
-    text-shadow: 2px 2px gray;
 }
 .modal-title {
     color: white;
@@ -196,42 +220,23 @@ div.modal-backdrop.fade.show {
     border-color: transparent;
     background-color: transparent;
 }
+/*seccion de calculo agregado*/
+
+#calculo-agregado {
+    text-align: center;
+}
+#porcentaje {
+    margin-top: 10px;
+    padding: 10px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px gray;
+}
+/*footer*/
+
 footer {
     margin-top: 10px;
     background-color: #1C408C;
-}
-.filters_big {
-    width: 100%;
-    background-color: #E8E17E;
-}
-.form-control#order {
-    border: solid 2px rgba(39, 74, 134, .7);
-    margin-bottom: 3px;
-    margin-top: 3px;
-    width: 20%;
-}
-@media (max-width: 576px) {
-    .form-control#order {
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 5px;
-    }
-}
-@media (min-width: 577px) and (max-width: 768px) {
-    .form-control#order {
-        width: 40%;
-        margin-top: 5px;
-    }
-}
-@media (min-width: 769px) and (max-width: 992px) {
-    .form-control#order {
-        width: 30%;
-        margin-top: 5px;
-    }
-}
-#reload .fas {
-    margin-right: 3px;
-}
-#reload.btn {
-    padding: .3rem .75rem;
 }
