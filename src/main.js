@@ -227,6 +227,7 @@ document.getElementById('btnBuscar').addEventListener("click", (event) => {
         vaciar();
         imprimir(dataNum);
     }
+    document.getElementById('calculo-agregado').innerHTML = '';
     document.getElementById('buscador').value = '';
     document.getElementById('buscador').focus();
 });
