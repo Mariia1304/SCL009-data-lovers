@@ -26,68 +26,72 @@
             </nav>
         </header>
         <main>
-            <div class="btn-plegable">
+            <!-- seccion de botones de filtros -->
+            <section>
                 <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="filtros-plegable">
-                        <!--  <a href="" id="btn-filters"> -->
-                        <section class="container-fluid filters_big">
-                            <div class="container" data-target="#">
+                    <div class="container-fluid filters_big">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
                                 <div class="row">
-                                    <div class="col-md-11" style="margin-top: 10px;">
-                                        <div class="row">
-                                            <ul id="botonesFiltros">
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <ul id="botonesFiltros">
+                                    </ul>
                                 </div>
                             </div>
-                        </section>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <nav class="navbar navbar-dark navbar-filters">
-                <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
-                    <span class="navbar-toggler-icon">
-                    </span>
-                    <span id="titulo-filtros">
-                        Filtros
-                    </span>
-                </button>
-                <select class="form-control" id="order">
-                    <option value="">
-                        Ordenar
-                    </option>
-                    <option value="AZ">
-                        de la A a la Z
-                    </option>
-                    <option value="ZA">
-                        de la Z a la A
-                    </option>
-                    <option value="NumUp">
-                        de 1 a 151
-                    </option>
-                    <option value="NumDown">
-                        de 151 a 1
-                    </option>
-                </select>
-                <button class="btn btn-buscar" id="reload">
-                    <i class="fas fa-redo-alt">
-                    </i>
-                    Limpiar
-                </button>
-            </nav>
-            <div class="container">
-                <div id="calculo-agregado">
+            </section>
+            <!-- seccion de ordenar/limpiar/filtrar -->
+            <section>
+                <nav class="navbar navbar-dark navbar-filters">
+                    <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
+                        <span class="navbar-toggler-icon">
+                        </span>
+                        <span id="titulo-filtros">
+                            Filtros
+                        </span>
+                    </button>
+                    <select class="form-control" id="order">
+                        <option value="">
+                            Ordenar
+                        </option>
+                        <option value="AZ">
+                            de la A a la Z
+                        </option>
+                        <option value="ZA">
+                            de la Z a la A
+                        </option>
+                        <option value="NumUp">
+                            de 1 a 151
+                        </option>
+                        <option value="NumDown">
+                            de 151 a 1
+                        </option>
+                    </select>
+                    <button class="btn btn-buscar" id="reload">
+                        <i class="fas fa-redo-alt">
+                        </i>
+                        Limpiar
+                    </button>
+                </nav>
+            </section>
+            <!-- seccion con calculo agregado -->
+            <section>
+                <div class="container">
+                    <div id="calculo-agregado">
+                    </div>
                 </div>
-            </div>
-            <!-- </a> -->
+            </section>
+            <!-- seccion con tarjetas pokemon -->
             <section>
                 <div class="row flex-center" id="tarjetas">
                 </div>
             </section>
-            <!-- Modal -->
-            <div id="modal">
-            </div>
+            <!-- seccion de modales -->
+            <section>
+                <div id="modal">
+                </div>
+            </section>
         </main>
         <footer class="py-4 text-white-50">
             <div class="container text-center">
