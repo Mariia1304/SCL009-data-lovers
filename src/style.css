@@ -1,251 +1,201 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 body {
-  background-image: url("https://i.ibb.co/pZRWxNv/pokebolas.png");
-  font-family: 'Poppins', sans-serif;
-  position: relative;
+    background-color: #DAF3E3;
+    font-family: 'Poppins', sans-serif;
 }
+/*header*/
 
 .navbar {
-  background-color: #1C408C;
+    background-color: #1C408C;
 }
-
 .filters_big {
-  width: 100%;
-  background-color: #E8E17E;
+    width: 100%;
+    background-color: #E8E17E;
 }
-
 .btn-buscar {
-  background-color: #E8E17E;
-  color: #274A86;
-  border: solid 2px rgba(39, 74, 134, .7);
-  ;
-  /*margin-top: 5px;*/
+    background-color: #E8E17E;
+    color: #274A86;
+    border: solid 2px rgba(39, 74, 134, .7);
 }
-
-@media (max-width: 576px) {
-  .btn-buscar {
-    margin-top: 5px;
-  }
-}
-#tarjetas .card-body {
-  padding: 0px;
-  text-align: center;
-}
-
-#tarjetas .card {
-
+.form-inline .btn-buscar {
     margin-right: 5px;
-    margin-left: 5px;
-    width: 9rem;
-    margin-top: 10px;
-    border: solid 2px rgba(39, 74, 134, .7);
-
 }
-
-.flex-center {
-  display: flex;
-  justify-content: center;
+@media (max-width: 576px) {
+    .form-inline .btn-buscar {
+        margin-top: 5px;
+    }
 }
-
-#tarjetas .btn-tarjeta {
-  padding: 2px 4px;
-  margin-bottom: 8px;
-  background-color: #E8E17E;
-  color: #274A86;
-  border: solid 2px rgba(39, 74, 134, .7);
-}
-
-#tarjetas .card-text {
-  margin-bottom: 3px;
-}
-
-#tarjetas .card-title {
-  margin-bottom: 0;
-}
-
-h5,
-.card-body p {
-  color: #274A86;
-}
-
-.imagen-pokemon {
-  grid-row: auto;
-}
-
-.navbar-filters {
-  background-color: #E8E17E;
-}
-
-.navbar-dark .navbar-toggler {
-    color: rgba(39, 74, 134, .7);
-    border: solid 2px rgba(39, 74, 134, .7);
-    font-size: 1.1rem;
-
-}
-
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(39, 74, 134, .7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+/*main: seccion de botones de filtros*/
 
 #botonesFiltros {
     margin-top: 10px;
 }
 .Bug {
-  background-color: #729f3f;
+    background-color: #729f3f;
 }
-
 .Dragon {
-  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
-  background-color: rgba(0, 0, 0, 0);
-  background-color: #53a4cf;
+    background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+    background-color: rgba(0, 0, 0, 0);
+    background-color: #53a4cf;
 }
-
 .Fairy {
-  background-color: #fdb9e9;
+    background-color: #fdb9e9;
 }
-
 .Fire {
-  background-color: #fd7d24;
+    background-color: #fd7d24;
 }
-
 .Ghost {
-  background-color: #7b62a3;
+    background-color: #7b62a3;
 }
-
 .Ground {
-  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
-  background-color: rgba(0, 0, 0, 0);
-  background-color: #f7de3f;
+    background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    background-color: rgba(0, 0, 0, 0);
+    background-color: #f7de3f;
 }
-
 .Normal {
-  background-color: #a4acaf;
+    background-color: #a4acaf;
 }
-
 .Psychic {
-  background-color: #f366b9;
+    background-color: #f366b9;
 }
-
 .Steel {
-  background-color: #9eb7b8;
+    background-color: #9eb7b8;
 }
-
 .Electric {
-  background-color: #eed535;
+    background-color: #eed535;
 }
-
 .Fighting {
-  background-color: #d56723;
+    background-color: #d56723;
 }
-
 .Flying {
-  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
-  background-color: rgba(0, 0, 0, 0);
-  background-color: #3dc7ef;
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+    background-color: rgba(0, 0, 0, 0);
+    background-color: #3dc7ef;
 }
-
 .Grass {
-  background-color: #9bcc50;
+    background-color: #9bcc50;
 }
-
 .Ice {
-  background-color: #51c4e7;
+    background-color: #51c4e7;
 }
-
 .Poison {
-  background-color: #b97fc9;
+    background-color: #b97fc9;
 }
-
 .Rock {
-  background-color: #a38c21;
+    background-color: #a38c21;
 }
-
 .Dark {
-  background-color: #707070;
+    background-color: #707070;
 }
-
 .Water {
-  background-color: #4592c4;
+    background-color: #4592c4;
 }
-
-.filter-list {
-  width: 90px;
-  margin: 5px;
+#tarjetas .card-body {
+    padding: 0px;
+    text-align: center;
 }
-
-.pokeinfo li .descripcion {
-  margin-right: 10px;
-  color: #224791;
+#tarjetas .card {
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 9rem;
+    margin-top: 10px;
+    border: solid 2px rgba(39, 74, 134, .7);
 }
-
-.descripcion {
-  font-family: 'Poppins', sans-serif;
+.flex-center {
+    display: flex;
+    justify-content: center;
 }
-
-.fas {
-  margin-right: 10px;
-  color: #224791;
-
+#tarjetas .btn-tarjeta {
+    padding: 2px 4px;
+    margin-bottom: 8px;
+    background-color: #E8E17E;
+    color: #274A86;
+    border: solid 2px rgba(39, 74, 134, .7);
 }
-
+#tarjetas .card-text {
+    margin-bottom: 3px;
+}
+#tarjetas .card-title {
+    margin-bottom: 0;
+}
+h5, .card-body p {
+    color: #274A86;
+}
 .imagen-pokemon {
-  border-style: double 2px
+    grid-row: auto;
 }
-
+.navbar-filters {
+    background-color: #E8E17E;
+}
+.navbar-dark .navbar-toggler {
+    color: rgba(39, 74, 134, .7);
+    border: solid 2px rgba(39, 74, 134, .7);
+    font-size: 1.1rem;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(39, 74, 134, .7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.filter-list {
+    width: 90px;
+    margin: 5px;
+}
+.pokeinfo li .descripcion {
+    margin-right: 10px;
+    color: #224791;
+}
+.descripcion {
+    font-family: 'Poppins', sans-serif;
+}
+.fas {
+    margin-right: 10px;
+    color: #224791;
+}
+.imagen-pokemon {
+    border-style: double 2px
+}
 div.modal-backdrop.fade.show {
-  display: none;
+    display: none;
 }
-
 #calculo-agregado {
-  text-align: center;
+    text-align: center;
 }
-
 #porcentaje {
-  margin-top: 10px;
-  padding: 10px;
-  border: solid 3px transparent;
-  border-radius: 5px;
-  font-size: 25px;
-  color: white;
-  text-shadow: 2px 2px gray;
+    margin-top: 10px;
+    padding: 10px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px gray;
 }
-
 .modal-title {
-  color: white;
-  text-shadow: 2px 2px gray;
+    color: white;
+    text-shadow: 2px 2px gray;
 }
-
 .modal-header {
     padding-bottom: 5px;
 }
-
 .row__modal {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
-
 .tipos__debilidades {
-  margin-top: 15px;
+    margin-top: 15px;
 }
-
 .p__nombre {
-  margin-bottom: 0px;
-  text-align: center;
+    margin-bottom: 0px;
+    text-align: center;
 }
-
 .pokeinfo ul {
-  list-style: none;
+    list-style: none;
 }
-
 .modal-open {
-  overflow: visible;
-  padding: 0px;
+    overflow: visible;
+    padding: 0px;
 }
-
 .pokemones {
-  border-color: transparent;
-  background-color: transparent;
+    border-color: transparent;
+    background-color: transparent;
 }
-
 footer {
     margin-top: 10px;
     background-color: #1C408C;
@@ -285,4 +235,3 @@ footer {
 #reload.btn {
     padding: .3rem .75rem;
 }
-
