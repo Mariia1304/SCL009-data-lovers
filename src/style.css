@@ -230,9 +230,24 @@ div.modal-backdrop.fade.show {
     padding: 10px;
     border: solid 3px transparent;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     text-shadow: 2px 2px gray;
+}
+@media (max-width: 576px) {
+    #porcentaje {
+        font-size: 15px;
+    }
+}
+/*seccion modalAbout*/
+
+#modalAbout .modal-header {
+    background-color: #E8E17E;
+    color: #1C408C;
+}
+#modalAbout .modal-header h5 {
+    color: #1C408C;
+    text-shadow: 1px 1px white;
 }
 /*footer*/
 

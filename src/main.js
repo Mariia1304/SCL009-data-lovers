@@ -151,6 +151,7 @@ const createBtnOfWeak = (arr) => {
             datatype = window.filterWeak(listaPokemones, valor);
             vaciar();
             imprimir(datatype);
+            document.getElementById('calculo-agregado').innerHTML = '';
         })
     }
 }
@@ -172,6 +173,8 @@ const createBtnOfType = (arr) => {
             datatype = window.filterType(listaPokemones, valor);
             vaciar();
             imprimir(datatype);
+            let porcentaje = window.percent(datatype);
+            document.getElementById('calculo-agregado').innerHTML = `<p id="porcentaje" class="${valor}">El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${valor}.</p>`;
         })
     }
 }
@@ -185,7 +188,7 @@ const createBtnOfFilters = (arr) => {
     document.getElementById('botonesFiltros').innerHTML = btnFilters;
     arr.forEach((element) => {
         document.getElementById(`${element}`).addEventListener('click', () => {
-            datatype = window.filterType(datatype, `${element}`);
+            datatype = window.filterType(listaPokemones, `${element}`);
             vaciar();
             imprimir(datatype);
             let porcentaje = window.percent(datatype);
@@ -267,8 +270,11 @@ document.getElementById('btnModalInfo').addEventListener('click', () => {
     let modalInfo = `<div aria-hidden="true" aria-labelledby="exampleModalScrollableTitle" class="modal fade" id="modalAbout" role="dialog" tabindex="-1">
                         <div class="modal-dialog modal-dialog-scrollable" role="document">
                             <div class="modal-content">
-                                <div class="modal-header"
+                                <div class="modal-header">
+            
                                     <h5 class="modal-title" id="exampleModalScrollableTitle">
+                                    <i class="fas fa-info-circle">
+                                    </i>
                                         PokéDex Info
                                     </h5>
                                     <button aria-label="Close" class="close" data-dismiss="modal" type="button">
