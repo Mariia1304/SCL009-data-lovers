@@ -25,6 +25,7 @@
                 </form>
             </nav>
         </header>
+        <main>
         <div class="btn-plegable">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="filtros-plegable">
@@ -32,32 +33,11 @@
                     <section class="container-fluid filters_big">
                         <div class="container" data-target="#">
                             <div class="row">
-                                <div class="col-md-2" style="margin-top: 10px;">
-                                    <select class="form-control" id="order">
-                                        <option value="">
-                                            Ordenar
-                                        </option>
-                                        <option value="AZ">
-                                            de la A a la Z
-                                        </option>
-                                        <option value="ZA">
-                                            de la Z a la A
-                                        </option>
-                                        <option value="NumUp">
-                                            de 1 a 151
-                                        </option>
-                                        <option value="NumDown">
-                                            de 151 a 1
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="col-md-8" style="margin-top: 10px;">
+                                <div class="col-md-11" style="margin-top: 10px;">
                                     <div class="row">
                                         <ul id="botonesFiltros">
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="col-md-2" style="margin-top: 10px;">
                                 </div>
                             </div>
                         </div>
@@ -69,9 +49,28 @@
             <button aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarToggleExternalContent" data-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon">
                 </span>
-                <span id="titulo-filtros">
+                <span id="titulo-filtros"> Filtros
                 </span>
             </button>
+            <div class="col-md-2" style="margin-top: 10px;">
+                    <select class="form-control" id="order">
+                        <option value="">
+                            Ordenar
+                        </option>
+                        <option value="AZ">
+                            de la A a la Z
+                        </option>
+                        <option value="ZA">
+                            de la Z a la A
+                        </option>
+                        <option value="NumUp">
+                            de 1 a 151
+                        </option>
+                        <option value="NumDown">
+                            de 151 a 1
+                        </option>
+                    </select>
+                </div>
             <div class="bnt-lim-ir">
                 <li class="btn btn-buscar" id="reload" type="">
                     <i class="fas fa-redo-alt">
@@ -89,8 +88,7 @@
         <!-- </a> -->
         <section <div="" class="row flex-center" id="tarjetas">
         </section>
-    </body>
-</html>
+        </main>
 <!-- Modal -->
 <div id="modal">
 </div>
@@ -110,3 +108,11 @@
 </script>
 <script src="main.js">
 </script>
+<footer>
+    <div id="fin-pagina">
+    -Todos los derechos reservados PokéDEx by PokeTeam-
+</div>
+</footer>
+
+</body>
+</html>
