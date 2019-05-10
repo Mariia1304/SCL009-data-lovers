@@ -39,7 +39,7 @@ const createCards = (arr) => {
                             Nº${element.num}
                         </p>
                         <a class = "btn btn-primary btn-tarjeta" data-target="#modal${element.id}" data-toggle="modal" href="#">
-                        <i class="fas fa-angle-double-right" style="margin-right: 5px";></i></i><span class="descripcion">Ver</span>
+                        <i class="fas fa-angle-double-right"></i></i><span class="descripcion">Ver</span>
                         </a>
                     </div>
                 </div>`;
@@ -59,12 +59,14 @@ const createModal = (arr) => {
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header ${element.type[0]}">
-                            <ul><li  style="list-style-image: url(img/pokeball2.gif)"></li></ul>
+                                <ul>
+                                    <li>
+                                    </li>
+                                </ul>
                                 <h4 class="modal-title" id="exampleModalLongTitle">
-
                                 ${element.name} N° ${element.num} 
                                 </h4>
-                                <button style="margin-left:0px" aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                     <span aria-hidden="true">
                                         ×
                                     </span>
