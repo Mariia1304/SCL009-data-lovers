@@ -3,9 +3,10 @@
 
 ## **El Proyecto**
 
-**PokéDex** es una página web que permite realizar búsquedas de Pokémones de la región Kanto a través del nombre o el ID de Pokémon. También nos permite filtrar por tipo, ordenar por abecedario y número de manera ascendente y descendente. 
+[_PokéDex_](https://natiacostap.github.io/SCL009-data-lovers/src/index.html) es una página web que permite realizar búsquedas de Pokémones de la región Kanto a través del nombre o el ID de Pokémon. También nos permite filtrar por tipo, ordenar por abecedario y número de manera ascendente y descendente. 
 
 Además, la página nos entrega información más detallada como su tipo, debilidad, altura y peso, entre otros detalles de cada Pokémon incluyendo sus evoluciones.
+
 
 
 ### **Usuarios**
@@ -76,7 +77,7 @@ Elegimos los colores basándonos en la paleta de colores de _PokémonGo_
 
 ![pokemonGo](https://i.ibb.co/Rhrpsv3/pokemon-go.jpg)
 
-Utilizamos la web _colormind_ para obtener la paleta de colores.
+Utilizamos la web [_colormind_](http://colormind.io/image/) para obtener la paleta de colores.
 
 ![colormind](https://i.ibb.co/r0V6JMp/Captura-de-pantalla-de-2019-05-09-18-58-19.png)
 
