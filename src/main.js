@@ -187,6 +187,10 @@ const createBtnOfFilters = (arr) => {
                                             ${element}
                         </li>`;
     })
+    printFilterType(arrBtn);
+};
+//imprimir resultado de filtrado por tipos
+const printFilterType = (arr) => {
     document.getElementById('botonesFiltros').innerHTML = btnFilters;
     arr.forEach((element) => {
         document.getElementById(`${element}`).addEventListener('click', () => {
@@ -197,7 +201,7 @@ const createBtnOfFilters = (arr) => {
             document.getElementById('calculo-agregado').innerHTML = `<p id="porcentaje" class="${element}">El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${element}.</p>`;
         });
     })
-};
+}
 //ordenamos la data
 let a = document.getElementById('order');
 let ordered;
