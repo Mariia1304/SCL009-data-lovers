@@ -4,7 +4,7 @@
 body {
     background-image: url("https://i.ibb.co/pZRWxNv/pokebolas.png");
     font-family: 'Poppins', sans-serif;
-} 
+}
 /*header*/
 
 .navbar {
@@ -23,7 +23,6 @@ body {
         margin-top: 5px;
     }
 }
-
 /*main: seccion de botones de filtros*/
 
 .filters_big {
@@ -193,6 +192,9 @@ h5, .card-body p {
     margin-right: 10px;
     color: #224791;
 }
+.fa-angle-double-right {
+    margin-right: 5px;
+}
 /* seccion de modales de pokemones*/
 
 div.modal-backdrop.fade.show {
@@ -205,7 +207,6 @@ div.modal-backdrop.fade.show {
 .modal-header {
     padding-bottom: 5px;
 }
-
 .tipos__debilidades {
     margin-top: 15px;
 }
@@ -223,6 +224,12 @@ div.modal-backdrop.fade.show {
 .pokemones {
     border-color: transparent;
     background-color: transparent;
+}
+.modal-header ul li {
+    list-style-image: url(img/pokeball2.gif);
+}
+.modal-header button {
+    margin-left: 0px;
 }
 /*seccion de calculo agregado*/
 
