@@ -197,6 +197,9 @@ h5, .card-body p {
 }
 /* seccion de modales de pokemones*/
 
+.modal-header .close {
+    margin-left: 0;
+}
 div.modal-backdrop.fade.show {
     display: none;
 }
@@ -228,8 +231,8 @@ div.modal-backdrop.fade.show {
 .modal-header ul li {
     list-style-image: url(img/pokeball2.gif);
 }
-.modal-header button {
-    margin-left: 0px;
+.modal-header ul {
+    margin-left: 20px;
 }
 /*seccion de calculo agregado*/
 
