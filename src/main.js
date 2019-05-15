@@ -7,7 +7,7 @@
  let btnFilters = '';
  let buscadorNombre = '';
  window.addEventListener('load', function() {
-     fetch('data/pokemon/pokemon.json').then(function(response) {
+     fetch('https://raw.githubusercontent.com/natiacostap/SCL009-data-lovers/master/src/data/pokemon/pokemon.json').then(function(response) {
          return response.json();
      }).then(function(data) {
          const listaPokemones = data.pokemon;
