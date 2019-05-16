@@ -6,6 +6,7 @@
  let btnWeak = '';
  let btnFilters = '';
  let buscadorNombre = '';
+
  window.onload
  fetch('https://raw.githubusercontent.com/natiacostap/SCL009-data-lovers/master/src/data/pokemon/pokemon.json').then((response) => {
      return response.json();
@@ -25,6 +26,7 @@
      const createCards = (arr) => {
          arr.forEach((element) => {
              card += `<div class="card">
+
                      <img class="${element.type[0]}" alt="foto-pokemon" class="card-img-top" src=${element.img}>
                      <div class = "card-body">
                          <h5 class = "card-title">
@@ -299,6 +301,7 @@
                              </div>
                          </div>
                      </div>`;
+
          document.getElementById('modalInfo').innerHTML = modalInfo;
      })
  });
