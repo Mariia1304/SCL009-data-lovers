@@ -6,6 +6,7 @@
  let btnWeak = '';
  let btnFilters = '';
  let buscadorNombre = '';
+ let error = '';
  window.addEventListener('load', function() {
      fetch('https://raw.githubusercontent.com/natiacostap/SCL009-data-lovers/master/src/data/pokemon/pokemon.json').then(function(response) {
          return response.json();
@@ -259,11 +260,21 @@
                  let dataName = window.filterName(listaPokemones, buscadorNombre);
                  vaciar();
                  imprimir(dataName);
+                 document.getElementById('noFound').innerHTML = '';
+                 if(dataName == ''){
+                    error = `<p id="error">Lo sentimos,"${buscadorNombre}" no fue encontrado.</p>`;
+                    document.getElementById('noFound').innerHTML = error;
+                 }
              } else {
                  let dataNum = window.filterNum(listaPokemones, buscadorNombre);
                  vaciar();
                  imprimir(dataNum);
+                 document.getElementById('noFound').innerHTML = '';
              }
+
+             
+             });
+              
              document.getElementById('calculo-agregado').innerHTML = '';
              document.getElementById('buscador').value = '';
              document.getElementById('buscador').focus();
@@ -302,4 +313,4 @@
              document.getElementById('modalInfo').innerHTML = modalInfo;
          })
      });
- });
+ ;

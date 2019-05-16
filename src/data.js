@@ -51,8 +51,18 @@ const sortData = (data, sortBy, sortOrder) => {
     }
 }
 window.sortData = sortData;
-const percent = (arr) => {
-    let result = parseInt(arr.length / 151 * 100);
-    return result;
+
+//calculo agregado
+// const percentType = (arr, condition) => {
+//     const arrPercentType = arr.filter(el => {
+//         return el.type.include(condition)
+//     });
+//     return arrPercentType;
+// }
+// window.percentType;
+
+const percent = (arr, condition) => {
+    let result = parseInt(arr.includes(condition) / arr.length * 100);
+    return result; 
 }
 window.percent = percent;

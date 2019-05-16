@@ -195,6 +195,30 @@ h5, .card-body p {
 .fa-angle-double-right {
     margin-right: 5px;
 }
+
+/*seccion no encontrado*/
+#noFound {
+    text-align: center;
+}
+#error {
+    background-color: white;
+    opacity: 0.6;
+    margin-top: 20px;
+    padding: 10px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+    font-size: 20px;
+  
+}
+@media (max-width: 576px) {
+    #error {
+        font-size: 15px;
+    }
+}
+
+
+
+
 /* seccion de modales de pokemones*/
 
 .modal-header .close {
