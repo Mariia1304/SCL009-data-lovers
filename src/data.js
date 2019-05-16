@@ -62,7 +62,7 @@ window.sortData = sortData;
 // window.percentType;
 
 const percent = (arr, condition) => {
-    let result = parseInt(arr.includes(condition) / arr.length * 100);
+    let result = parseInt(arr.length/ 151 * 100);
     return result; 
 }
 window.percent = percent;
