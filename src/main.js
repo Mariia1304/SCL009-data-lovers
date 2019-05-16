@@ -6,7 +6,9 @@
  let btnWeak = '';
  let btnFilters = '';
  let buscadorNombre = '';
-
+ google.load('visualization', '1.0', {
+     'packages': ['corechart']
+ });
  window.onload
  fetch('https://raw.githubusercontent.com/natiacostap/SCL009-data-lovers/master/src/data/pokemon/pokemon.json').then((response) => {
      return response.json();
@@ -195,8 +197,7 @@
                  let porcentaje = window.percent(datatype);
                  document.getElementById('calculo-agregado').innerHTML = `<p id="porcentaje" class="${element}">El ${porcentaje}% de los pokemones de la región Kanto son de tipo ${element}.</p>`;
                  document.getElementById('noFound').innerHTML = '';
-
-                });
+             });
          })
      }
      //imprimir evolution
@@ -254,55 +255,50 @@
          vaciar();
          imprimir(ordered);
      }, false);
-         //buscar pokemones por nombre o numero
-         document.getElementById('btnBuscar').addEventListener("click", (event) => {
-             event.preventDefault();
-             buscadorNombre = document.getElementById('buscador').value;
-             if (isNaN(buscadorNombre) === true) {
-                 buscadorNombre = MaysPrimera(buscadorNombre.toLowerCase());
-                 let dataName = window.filterName(listaPokemones, buscadorNombre);
-                 vaciar();
-                 imprimir(dataName);
-                 document.getElementById('noFound').innerHTML = '';
-                 if(dataName == ''){
-                    error = `<p id="error">Lo sentimos,"${buscadorNombre}" no fue encontrado.</p>`;
-                    document.getElementById('noFound').innerHTML = error;
-                    document.getElementById('calculo-agregado').innerHTML = '';
-                 }
-             } else {
-                 let dataNum = window.filterNum(listaPokemones, buscadorNombre);
-                 vaciar();
-                 imprimir(dataNum);
-                 
-                 document.getElementById('noFound').innerHTML = '';
+     //buscar pokemones por nombre o numero
+     document.getElementById('btnBuscar').addEventListener("click", (event) => {
+         event.preventDefault();
+         buscadorNombre = document.getElementById('buscador').value;
+         if (isNaN(buscadorNombre) === true) {
+             buscadorNombre = MaysPrimera(buscadorNombre.toLowerCase());
+             let dataName = window.filterName(listaPokemones, buscadorNombre);
+             vaciar();
+             imprimir(dataName);
+             document.getElementById('noFound').innerHTML = '';
+             if (dataName == '') {
+                 error = `<p id="error">Lo sentimos,"${buscadorNombre}" no fue encontrado.</p>`;
+                 document.getElementById('noFound').innerHTML = error;
+                 document.getElementById('calculo-agregado').innerHTML = '';
              }
-
-             
-             });
-              
-             document.getElementById('calculo-agregado').innerHTML = '';
-             document.getElementById('buscador').value = '';
-             document.getElementById('buscador').focus();
-         });
-         //converir primera letra de string en mayuscula
-         function MaysPrimera(string) {
-             return string.charAt(0).toUpperCase() + string.slice(1);
+         } else {
+             let dataNum = window.filterNum(listaPokemones, buscadorNombre);
+             vaciar();
+             imprimir(dataNum);
+             document.getElementById('noFound').innerHTML = '';
          }
-         document.getElementById('calculo-agregado').innerHTML = '';
-         document.getElementById('buscador').value = '';
-         document.getElementById('buscador').focus();
-     
-     //converir primera letra de string en mayuscula
-     function MaysPrimera(string) {
-         return string.charAt(0).toUpperCase() + string.slice(1);
-     }
-     //recargar la pagina
-     document.getElementById('reload').addEventListener('click', () => {
-         location.reload();
-     })
-     // modal de informacion
-     document.getElementById('btnModalInfo').addEventListener('click', () => {
-         let modalInfo = `<div aria-hidden="true" aria-labelledby="exampleModalScrollableTitle" class="modal fade" id="modalAbout" role="dialog" tabindex="-1">
+     });
+     document.getElementById('calculo-agregado').innerHTML = '';
+     document.getElementById('buscador').value = '';
+     document.getElementById('buscador').focus();
+ });
+ //converir primera letra de string en mayuscula
+ function MaysPrimera(string) {
+     return string.charAt(0).toUpperCase() + string.slice(1);
+ }
+ document.getElementById('calculo-agregado').innerHTML = '';
+ document.getElementById('buscador').value = '';
+ document.getElementById('buscador').focus();
+ //converir primera letra de string en mayuscula
+ function MaysPrimera(string) {
+     return string.charAt(0).toUpperCase() + string.slice(1);
+ }
+ //recargar la pagina
+ document.getElementById('reload').addEventListener('click', () => {
+     location.reload();
+ })
+ // modal de informacion
+ document.getElementById('btnModalInfo').addEventListener('click', () => {
+     let modalInfo = `<div aria-hidden="true" aria-labelledby="exampleModalScrollableTitle" class="modal fade" id="modalAbout" role="dialog" tabindex="-1">
                          <div class="modal-dialog modal-dialog-scrollable" role="document">
                              <div class="modal-content">
                                  <div class="modal-header">
@@ -323,7 +319,27 @@
                              </div>
                          </div>
                      </div>`;
+     document.getElementById('modalInfo').innerHTML = modalInfo;
+ })
+ google.charts.setOnLoadCallback(drawChart);
 
-         document.getElementById('modalInfo').innerHTML = modalInfo;
-     })
- 
+ function drawChart() {
+     var data = google.visualization.arrayToDataTable([key, value])
+     var options = {
+         title: 'Data por años',
+         vAxis: {
+             title: 'Valor'
+         },
+         hAxis: {
+             title: 'Año'
+         },
+         seriesType: 'bars',
+         series: {
+             10: {
+                 type: 'line'
+             }
+         }
+     };
+     var chart = new google.visualization.ComboChart(document.getElementById("charts"));
+     chart.draw(data, options);
+ }
